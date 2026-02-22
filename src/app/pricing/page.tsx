@@ -6,21 +6,23 @@ import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 
 export const metadata: Metadata = {
-  title: "Logo Design Pricing | Standard and Premium Packages",
+  title: "Logo Design Pricing | Standard & Premium Packages",
   description:
-    "Choose Standard or Premium logo design. Clear deliverables, fast turnaround, and professional files. Start your brief in minutes.",
+    "Transparent logo design pricing: Standard and Premium packages. Clear deliverables, fast turnaround, and professional source files. Start your brief in minutes.",
   openGraph: {
-    title: "Logo Design Pricing | Standard and Premium Packages",
+    title: "Logo Design Pricing | Standard & Premium Packages",
     description:
-      "Choose Standard or Premium logo design. Clear deliverables, fast turnaround, and professional files. Start your brief in minutes.",
+      "Transparent logo design pricing: Standard and Premium packages. Clear deliverables, fast turnaround, and professional source files.",
     url: fullUrl("/pricing"),
     type: "website",
+    siteName: "VARG",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Logo Design Pricing | Standard and Premium Packages",
+    title: "Logo Design Pricing | Standard & Premium Packages",
     description:
-      "Choose Standard or Premium logo design. Clear deliverables, fast turnaround, and professional files. Start your brief in minutes.",
+      "Transparent logo design pricing. Clear deliverables and professional files.",
   },
   alternates: { canonical: fullUrl("/pricing") },
   robots: { index: true, follow: true },

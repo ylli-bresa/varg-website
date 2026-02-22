@@ -7,21 +7,24 @@ import { BreadcrumbJsonLd } from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Custom Logo Design | Concepts Built for Your Brand",
   description:
-    "Custom logo design with clear deliverables, fast turnaround, and professional source files available. Start your brief in minutes.",
+    "Custom logo design with clear deliverables, fast turnaround, and professional source files. Concepts built for your brand. Start your brief in minutes.",
   openGraph: {
     title: "Custom Logo Design | Concepts Built for Your Brand",
     description:
-      "Custom logo design with clear deliverables, fast turnaround, and professional source files available. Start your brief in minutes.",
+      "Custom logo design with clear deliverables, fast turnaround, and professional source files.",
     url: fullUrl("/custom-logo-design"),
     type: "website",
+    siteName: "VARG",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
     title: "Custom Logo Design | Concepts Built for Your Brand",
     description:
-      "Custom logo design with clear deliverables, fast turnaround, and professional source files available. Start your brief in minutes.",
+      "Custom logo design. Clear deliverables, fast turnaround, professional files.",
   },
   alternates: { canonical: fullUrl("/custom-logo-design") },
+  robots: { index: true, follow: true },
 };
 
 const breadcrumbs = [

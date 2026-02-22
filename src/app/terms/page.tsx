@@ -9,11 +9,17 @@ export const metadata: Metadata = {
   description: `Terms of Service for ${site.name}. Rules and conditions for using our logo design services and website.`,
   openGraph: {
     title: `Terms of Service | ${site.name}`,
-    description: `Terms and conditions for using our logo design services.`,
+    description: `Terms and conditions for using our logo design services and website.`,
     url: fullUrl("/terms"),
     type: "website",
+    siteName: site.name,
+    locale: "en_US",
   },
-  twitter: { card: "summary_large_image", title: `Terms of Service | ${site.name}` },
+  twitter: {
+    card: "summary_large_image",
+    title: `Terms of Service | ${site.name}`,
+    description: `Terms and conditions for using our logo design services.`,
+  },
   alternates: { canonical: fullUrl("/terms") },
   robots: { index: true, follow: true },
 };
@@ -31,12 +37,13 @@ export default function TermsPage() {
           <span className="text-[var(--foreground)]">Terms of Service</span>
         </nav>
 
-        <h1 className="text-3xl font-semibold tracking-tight text-[var(--foreground)] sm:text-4xl">
-          Terms of Service
-        </h1>
-        <p className="mt-2 text-sm text-[var(--foreground)]/60">Last updated: {lastUpdated}</p>
+        <article aria-label="Terms of Service">
+          <h1 className="text-3xl font-semibold tracking-tight text-[var(--foreground)] sm:text-4xl">
+            Terms of Service
+          </h1>
+          <p className="mt-2 text-sm text-[var(--foreground)]/60">Last updated: {lastUpdated}</p>
 
-        <div className="prose prose-neutral mt-10 max-w-none dark:prose-invert">
+          <div className="prose prose-neutral mt-10 max-w-none dark:prose-invert">
           <p className="text-[var(--foreground)]/80">
             These Terms of Service (“Terms”) govern your use of the website and services operated by {site.name} (“we”, “us”, “our”). By using our site or engaging our logo design and brand identity services, you agree to these Terms.
           </p>
@@ -93,11 +100,12 @@ export default function TermsPage() {
               {site.contactEmail}
             </a>.
           </p>
-        </div>
+          </div>
 
-        <p className="mt-12 text-sm text-[var(--foreground)]/60">
-          <Link href="/" className="transition-colors duration-200 hover:text-[var(--foreground)]">← Back to home</Link>
-        </p>
+          <p className="mt-12 text-sm text-[var(--foreground)]/60">
+            <Link href="/" className="transition-colors duration-200 hover:text-[var(--foreground)]">← Back to home</Link>
+          </p>
+        </article>
       </div>
       </AnimateOnScroll>
     </div>

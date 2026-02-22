@@ -1,13 +1,18 @@
 import { site, fullUrl } from "@/lib/site";
 
+const base = site.baseUrl.replace(/\/$/, "");
+const orgId = `${base}/#organization`;
+
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": `${site.baseUrl.replace(/\/$/, "")}/#organization`,
+  "@id": orgId,
   name: site.name,
   url: site.baseUrl,
   description: site.tagline,
   email: site.contactEmail,
+  logo: fullUrl("/logos/black-logo.svg"),
+  sameAs: [site.social.instagram, site.social.pinterest].filter(Boolean),
 };
 
 const webSiteSchema = {
@@ -16,7 +21,7 @@ const webSiteSchema = {
   name: site.name,
   url: site.baseUrl,
   description: site.tagline,
-  publisher: { "@id": `${site.baseUrl}/#organization` },
+  publisher: { "@id": orgId },
 };
 
 const professionalServiceSchema = {
@@ -28,12 +33,24 @@ const professionalServiceSchema = {
   areaServed: ["US", "GB", "EU"],
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Logo Design",
+  description:
+    "Professional logo design for startups and brands. Custom logos, brand identity, fast delivery, and premium quality.",
+  provider: { "@id": orgId },
+  areaServed: ["US", "GB", "EU"],
+  serviceType: "Logo Design",
+};
+
 export function HomeJsonLd() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
     </>
   );
 }

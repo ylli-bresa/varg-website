@@ -7,21 +7,24 @@ import { BreadcrumbJsonLd } from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Logo Design for Startups | Fast Launch-Ready Branding",
   description:
-    "Startup logo design built for speed, clarity, and launch readiness. Packages designed for founders who move fast.",
+    "Startup logo design built for speed, clarity, and launch readiness. Packages designed for founders who move fast. Get a logo that works from day one.",
   openGraph: {
     title: "Logo Design for Startups | Fast Launch-Ready Branding",
     description:
-      "Startup logo design built for speed, clarity, and launch readiness. Packages designed for founders who move fast.",
+      "Startup logo design built for speed, clarity, and launch readiness. Packages for founders who move fast.",
     url: fullUrl("/logo-design-for-startups"),
     type: "website",
+    siteName: "VARG",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
     title: "Logo Design for Startups | Fast Launch-Ready Branding",
     description:
-      "Startup logo design built for speed, clarity, and launch readiness. Packages designed for founders who move fast.",
+      "Startup logo design. Speed, clarity, launch readiness.",
   },
   alternates: { canonical: fullUrl("/logo-design-for-startups") },
+  robots: { index: true, follow: true },
 };
 
 const breadcrumbs = [

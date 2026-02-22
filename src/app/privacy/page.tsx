@@ -9,11 +9,17 @@ export const metadata: Metadata = {
   description: `Privacy Policy for ${site.name}. How we collect, use, and protect your information when you use our logo design services and website.`,
   openGraph: {
     title: `Privacy Policy | ${site.name}`,
-    description: `How we collect, use, and protect your information.`,
+    description: `How we collect, use, and protect your information when you use our logo design services and website.`,
     url: fullUrl("/privacy"),
     type: "website",
+    siteName: site.name,
+    locale: "en_US",
   },
-  twitter: { card: "summary_large_image", title: `Privacy Policy | ${site.name}` },
+  twitter: {
+    card: "summary_large_image",
+    title: `Privacy Policy | ${site.name}`,
+    description: `How we collect, use, and protect your information.`,
+  },
   alternates: { canonical: fullUrl("/privacy") },
   robots: { index: true, follow: true },
 };
@@ -31,12 +37,13 @@ export default function PrivacyPage() {
           <span className="text-[var(--foreground)]">Privacy Policy</span>
         </nav>
 
-        <h1 className="text-3xl font-semibold tracking-tight text-[var(--foreground)] sm:text-4xl">
-          Privacy Policy
-        </h1>
-        <p className="mt-2 text-sm text-[var(--foreground)]/60">Last updated: {lastUpdated}</p>
+        <article aria-label="Privacy Policy">
+          <h1 className="text-3xl font-semibold tracking-tight text-[var(--foreground)] sm:text-4xl">
+            Privacy Policy
+          </h1>
+          <p className="mt-2 text-sm text-[var(--foreground)]/60">Last updated: {lastUpdated}</p>
 
-        <div className="prose prose-neutral mt-10 max-w-none dark:prose-invert">
+          <div className="prose prose-neutral mt-10 max-w-none dark:prose-invert">
           <p className="text-[var(--foreground)]/80">
             {site.name} (“we”, “us”, “our”) operates the website at {site.baseUrl} and provides logo design and brand identity services. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website or services.
           </p>
@@ -88,11 +95,12 @@ export default function PrivacyPage() {
               {site.contactEmail}
             </a>.
           </p>
-        </div>
+          </div>
 
-        <p className="mt-12 text-sm text-[var(--foreground)]/60">
-          <Link href="/" className="transition-colors duration-200 hover:text-[var(--foreground)]">← Back to home</Link>
-        </p>
+          <p className="mt-12 text-sm text-[var(--foreground)]/60">
+            <Link href="/" className="transition-colors duration-200 hover:text-[var(--foreground)]">← Back to home</Link>
+          </p>
+        </article>
       </div>
       </AnimateOnScroll>
     </div>

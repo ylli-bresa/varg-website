@@ -20,7 +20,7 @@ export function MasonryGrid({ items }: MasonryGridProps) {
         >
           <WorkGridImage
             src={imagePath}
-            alt={title}
+            alt={`${title} – logo design portfolio`}
             width={imageWidth}
             height={imageHeight}
             className="w-full rounded-[20px] object-contain transition-transform duration-300 group-hover:scale-[1.02]"

@@ -20,9 +20,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     description,
-    openGraph: { title, description, url: fullUrl(`/work/${slug}`), type: "website", images: [{ url: fullUrl(item.imagePath), alt: item.title }] },
+    openGraph: {
+      title,
+      description,
+      url: fullUrl(`/work/${slug}`),
+      type: "website",
+      siteName: "VARG",
+      locale: "en_US",
+      images: [{ url: fullUrl(item.imagePath), alt: item.title, width: item.imageWidth ?? 600, height: item.imageHeight ?? 600 }],
+    },
     twitter: { card: "summary_large_image", title, description },
     alternates: { canonical: fullUrl(`/work/${slug}`) },
+    robots: { index: true, follow: true },
   };
 }
 

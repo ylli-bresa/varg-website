@@ -8,21 +8,23 @@ import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 
 export const metadata: Metadata = {
-  title: "Contact | Start Your Logo Brief",
+  title: "Contact | Start Your Logo Design Brief",
   description:
-    "Start a logo design brief in minutes. Choose Quick Email or our guided form, attach references, select a package, and send your request.",
+    "Start your logo design brief in minutes. Quick email or guided form, attach references, select a package, and get a fast response from VARG.",
   openGraph: {
-    title: "Contact | Start Your Logo Brief",
+    title: "Contact | Start Your Logo Design Brief",
     description:
-      "Start a logo design brief in minutes. Choose Quick Email or our guided form, attach references, select a package, and send your request.",
+      "Start your logo design brief in minutes. Quick email or guided form. Get a fast response from VARG.",
     url: fullUrl("/contact"),
     type: "website",
+    siteName: "VARG",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact | Start Your Logo Brief",
+    title: "Contact | Start Your Logo Design Brief",
     description:
-      "Start a logo design brief in minutes. Choose Quick Email or our guided form, attach references, select a package, and send your request.",
+      "Start your logo design brief in minutes. Quick email or guided form.",
   },
   alternates: { canonical: fullUrl("/contact") },
   robots: { index: true, follow: true },

@@ -5,23 +5,26 @@ import { CTAButton } from "@/components/CTAButton";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Logo Design Services | Fast, Trusted Logo Design",
+  title: "Professional Logo Design Services | Fast & Trusted",
   description:
-    "Professional logo design services built for speed and clarity. View work, choose a package, and start your brief today.",
+    "Professional logo design services built for speed and clarity. Multiple concepts, revisions, high-resolution files. View our portfolio and start your brief today.",
   openGraph: {
-    title: "Logo Design Services | Fast, Trusted Logo Design",
+    title: "Professional Logo Design Services | Fast & Trusted",
     description:
-      "Professional logo design services built for speed and clarity. View work, choose a package, and start your brief today.",
+      "Professional logo design services built for speed and clarity. Multiple concepts, revisions, high-resolution files.",
     url: fullUrl("/logo-design"),
     type: "website",
+    siteName: "VARG",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Logo Design Services | Fast, Trusted Logo Design",
+    title: "Professional Logo Design Services | Fast & Trusted",
     description:
-      "Professional logo design services built for speed and clarity. View work, choose a package, and start your brief today.",
+      "Professional logo design services. View work, choose a package, start your brief today.",
   },
   alternates: { canonical: fullUrl("/logo-design") },
+  robots: { index: true, follow: true },
 };
 
 const breadcrumbs = [

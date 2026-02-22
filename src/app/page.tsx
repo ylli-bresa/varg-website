@@ -11,23 +11,26 @@ import { HomeJsonLd } from "@/components/JsonLd";
 import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 
 export const metadata: Metadata = {
-  title: "Logo Design Services | Fast, Trusted, Results-Driven",
+  title: "Professional Logo Design Services | Fast & Trusted",
   description:
-    "High-performance logo design built for brands that need clarity, speed, and trust. Explore our work, choose a package, and start your brief in minutes.",
+    "High-performance logo design for brands that need clarity, speed, and trust. Explore our portfolio, choose a package, and start your brief in minutes.",
   openGraph: {
-    title: "Logo Design Services | Fast, Trusted, Results-Driven",
+    title: "Professional Logo Design Services | Fast & Trusted",
     description:
-      "High-performance logo design built for brands that need clarity, speed, and trust. Explore our work, choose a package, and start your brief in minutes.",
+      "High-performance logo design for brands that need clarity, speed, and trust. Explore our portfolio, choose a package, and start your brief in minutes.",
     url: fullUrl("/"),
     type: "website",
+    siteName: "VARG",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Logo Design Services | Fast, Trusted, Results-Driven",
+    title: "Professional Logo Design Services | Fast & Trusted",
     description:
-      "High-performance logo design built for brands that need clarity, speed, and trust. Explore our work, choose a package, and start your brief in minutes.",
+      "High-performance logo design for brands that need clarity, speed, and trust. Explore our portfolio, choose a package, and start your brief in minutes.",
   },
   alternates: { canonical: fullUrl("/") },
+  robots: { index: true, follow: true },
 };
 
 export default function HomePage() {

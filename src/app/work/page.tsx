@@ -7,21 +7,23 @@ import { FinalCTA } from "@/components/home/FinalCTA";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Logo Portfolio | Recent Work and Signature Styles",
+  title: "Logo Design Portfolio | Recent Work & Case Studies",
   description:
-    "Explore a curated logo portfolio. Click any project to view it and request a similar direction for your brand.",
+    "Explore our logo design portfolio. Professional logo work for startups and brands. Click any project to view details and request a similar direction.",
   openGraph: {
-    title: "Logo Portfolio | Recent Work and Signature Styles",
+    title: "Logo Design Portfolio | Recent Work & Case Studies",
     description:
-      "Explore a curated logo portfolio. Click any project to view it and request a similar direction for your brand.",
+      "Explore our logo design portfolio. Professional logo work for startups and brands. Click any project to view details and request a similar direction.",
     url: fullUrl("/work"),
     type: "website",
+    siteName: "VARG",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Logo Portfolio | Recent Work and Signature Styles",
+    title: "Logo Design Portfolio | Recent Work & Case Studies",
     description:
-      "Explore a curated logo portfolio. Click any project to view it and request a similar direction for your brand.",
+      "Explore our logo design portfolio. Professional logo work for startups and brands.",
   },
   alternates: { canonical: fullUrl("/work") },
   robots: { index: true, follow: true },
