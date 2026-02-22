@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getWorkPreview, workPreviewSlugs } from "@/data/work";
+import { getWorkPreview, workPreviewSlugs, workPreviewTags } from "@/data/work";
 
 export function WorkPreview() {
   const items = getWorkPreview(workPreviewSlugs);
@@ -17,6 +17,7 @@ export function WorkPreview() {
         <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6">
           {items.map(({ slug, title, imagePath, imageWidth = 400, imageHeight = 400 }, index) => {
             const isLast = index === items.length - 1;
+            const tag = workPreviewTags[index];
             return (
               <Link
                 key={slug}
@@ -33,6 +34,17 @@ export function WorkPreview() {
                     className={`transition-all duration-300 group-hover:opacity-90 ${isLast ? "object-cover" : "object-contain"}`}
                     sizes="(max-width: 640px) 50vw, 33vw"
                   />
+                  {tag && (
+                    <span
+                      className={`absolute bottom-2 left-2 w-max max-w-[calc(100%-1rem)] break-words rounded-2xl border px-3 py-2 text-center text-xs font-medium shadow-sm backdrop-blur-md ${
+                        index === 0
+                          ? "border-[var(--foreground)]/20 bg-[var(--foreground)]/80 text-[var(--background)]"
+                          : "border-white/20 bg-[var(--foreground)]/5 text-[var(--foreground)] dark:border-white/10 dark:bg-[var(--foreground)]/10"
+                      }`}
+                    >
+                      {tag.charAt(0).toUpperCase() + tag.slice(1)}
+                    </span>
+                  )}
                 </div>
               </Link>
             );

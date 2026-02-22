@@ -148,6 +148,16 @@ export const workPreviewSlugs = [
   "548ba17c216e1e889169807c4b0b81ba",
 ] as const;
 
+/** Tags for each preview item (same order as workPreviewSlugs). */
+export const workPreviewTags = [
+  "Clipping Platform",
+  "web3 platform",
+  "Investors Club",
+  "Transport company",
+  "Designer brand",
+  "Clothing Line",
+] as const;
+
 export function getWorkBySlug(slug: string): WorkItem | undefined {
   return workItems.find((w) => w.slug === slug);
 }
