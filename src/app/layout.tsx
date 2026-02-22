@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     description:
       "Varg Design is a professional logo design studio creating custom logos for startups, brands, and businesses worldwide.",
   },
-  icons: { icon: "/favicon.png" },
+  icons: { icon: "/favicon.ico" },
 };
 
 export const viewport = { width: "device-width", initialScale: 1 };
