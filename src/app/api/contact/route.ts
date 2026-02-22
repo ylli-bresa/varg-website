@@ -41,19 +41,26 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: "Unsupported content type." }, { status: 400 });
     }
 
+    // Honeypot filled = bot; reject immediately (no captcha).
     if (body[HONEYPOT_FIELD]?.trim()) {
       return NextResponse.json({ message: "Something went wrong." }, { status: 400 });
     }
-    const loadedAt = body._loadedAt ? Number(body._loadedAt) : 0;
-    if (loadedAt && Date.now() - loadedAt < MIN_SUBMIT_MS) {
-      return NextResponse.json({ message: "Please wait a moment and try again." }, { status: 400 });
-    }
 
+    const loadedAt = body._loadedAt ? Number(body._loadedAt) : 0;
+    const tooFast = loadedAt > 0 && Date.now() - loadedAt < MIN_SUBMIT_MS;
     const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY;
-    if (recaptchaSecret) {
+
+    // When something is fishy (e.g. submit too fast), require reCAPTCHA verification.
+    if (tooFast) {
+      if (!recaptchaSecret) {
+        return NextResponse.json({ message: "Please wait a moment and try again." }, { status: 400 });
+      }
       const token = body.recaptchaToken?.trim();
       if (!token) {
-        return NextResponse.json({ message: "Verification failed. Please complete the reCAPTCHA." }, { status: 400 });
+        return NextResponse.json(
+          { message: "Please complete the verification and try again.", code: "VERIFICATION_REQUIRED" },
+          { status: 400 }
+        );
       }
       const verifyRes = await fetch("https://www.google.com/recaptcha/api/siteverify", {
         method: "POST",
@@ -62,8 +69,12 @@ export async function POST(req: NextRequest) {
       });
       const verify = (await verifyRes.json()) as { success?: boolean };
       if (!verify.success) {
-        return NextResponse.json({ message: "Verification failed. Please try again." }, { status: 400 });
+        return NextResponse.json(
+          { message: "Verification failed. Please try again.", code: "VERIFICATION_REQUIRED" },
+          { status: 400 }
+        );
       }
+      // Verification passed; continue with the request.
     }
 
     const parsed = briefSchema.safeParse(body);

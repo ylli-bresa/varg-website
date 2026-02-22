@@ -76,6 +76,8 @@ export function GuidedFormWizard() {
   const [sending, setSending] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  /** When true, server asked for captcha (e.g. submit was too fast); show reCAPTCHA and require it on next submit. */
+  const [verificationRequired, setVerificationRequired] = useState(false);
 
   const update = useCallback((key: keyof BriefData, value: string | FileList | null) => {
     setData((d) => ({ ...d, [key]: value }));
@@ -119,10 +121,10 @@ export function GuidedFormWizard() {
       setError("Please fill in your email, brand name, and package before sending.");
       return;
     }
-    if (recaptchaSiteKey) {
+    if (recaptchaSiteKey && verificationRequired) {
       const token = recaptchaRef.current?.getValue();
       if (!token) {
-        setError("Please complete the reCAPTCHA verification.");
+        setError("Please complete the verification and try again.");
         return;
       }
     }
@@ -148,9 +150,13 @@ export function GuidedFormWizard() {
       });
       if (!res.ok) {
         const err = await res.json().catch(() => ({}));
+        if (err.code === "VERIFICATION_REQUIRED") {
+          setVerificationRequired(true);
+        }
         throw new Error(err.message ?? "Something went wrong.");
       }
       setSuccess(true);
+      setVerificationRequired(false);
       recaptchaRef.current?.reset();
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to send. Try again.");
@@ -362,8 +368,9 @@ export function GuidedFormWizard() {
         </label>
       )}
 
-      {isLast && recaptchaSiteKey && (
-        <div className="flex justify-center">
+      {isLast && recaptchaSiteKey && verificationRequired && (
+        <div className="flex flex-col items-center gap-2">
+          <p className="text-sm text-[var(--foreground)]/80">Please verify you’re not a robot, then send again.</p>
           <ReCAPTCHA
             ref={recaptchaRef}
             sitekey={recaptchaSiteKey}
