@@ -5,13 +5,13 @@ import { CTAButton } from "@/components/CTAButton";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Logo Design for Startups | Fast Launch-Ready Branding",
+  title: "Logo Design for Startups | Launch-Ready Branding",
   description:
-    "Startup logo design built for speed, clarity, and launch readiness. Packages designed for founders who move fast. Get a logo that works from day one.",
+    "Logo design for startups: fast, launch-ready, and built for founders. Get a professional logo without the agency wait.",
   openGraph: {
-    title: "Logo Design for Startups | Fast Launch-Ready Branding",
+    title: "Logo Design for Startups | Launch-Ready Branding",
     description:
-      "Startup logo design built for speed, clarity, and launch readiness. Packages for founders who move fast.",
+      "Logo design for startups: fast, launch-ready, and built for founders. Get a professional logo without the agency wait.",
     url: fullUrl("/logo-design-for-startups"),
     type: "website",
     siteName: "VARG",
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Logo Design for Startups | Fast Launch-Ready Branding",
+    title: "Logo Design for Startups | Launch-Ready Branding",
     description:
-      "Startup logo design. Speed, clarity, launch readiness.",
+      "Logo design for startups: fast, launch-ready, and built for founders. Get a professional logo without the agency wait.",
   },
   alternates: { canonical: fullUrl("/logo-design-for-startups") },
   robots: { index: true, follow: true },

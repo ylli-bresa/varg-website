@@ -31,9 +31,9 @@ export function Hero() {
           ))}
         </div>
         <div className="animate-hero-cta mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <CTAButton href="/contact?start=1&mode=guided">Get your Logo</CTAButton>
+          <CTAButton href="/contact?start=1&mode=guided">Hire a logo designer</CTAButton>
           <CTAButton href="/pricing" variant="secondary">
-            See Pricing
+            Logo design pricing
           </CTAButton>
         </div>
       </div>

@@ -2,17 +2,18 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { fullUrl } from "@/lib/site";
 import { PricingToggle } from "@/components/PricingToggle";
+import { FAQ } from "@/components/FAQ";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 
 export const metadata: Metadata = {
-  title: "Logo Design Pricing | Standard & Premium Packages",
+  title: "Logo Design Pricing | Transparent Packages & Plans",
   description:
-    "Transparent logo design pricing: Standard and Premium packages. Clear deliverables, fast turnaround, and professional source files. Start your brief in minutes.",
+    "See logo design pricing that fits your budget. Standard and Premium packages with clear deliverables. Start your project today.",
   openGraph: {
-    title: "Logo Design Pricing | Standard & Premium Packages",
+    title: "Logo Design Pricing | Transparent Packages & Plans",
     description:
-      "Transparent logo design pricing: Standard and Premium packages. Clear deliverables, fast turnaround, and professional source files.",
+      "See logo design pricing that fits your budget. Standard and Premium packages with clear deliverables. Start your project today.",
     url: fullUrl("/pricing"),
     type: "website",
     siteName: "VARG",
@@ -20,9 +21,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Logo Design Pricing | Standard & Premium Packages",
+    title: "Logo Design Pricing | Transparent Packages & Plans",
     description:
-      "Transparent logo design pricing. Clear deliverables and professional files.",
+      "See logo design pricing that fits your budget. Standard and Premium packages with clear deliverables. Start your project today.",
   },
   alternates: { canonical: fullUrl("/pricing") },
   robots: { index: true, follow: true },
@@ -49,10 +50,17 @@ export default function PricingPage() {
             Pricing
           </h1>
         <p className="mt-3 text-[var(--foreground)]/80">
-          Two packages. Clear deliverables. Fast turnaround.
+          Two packages. Clear deliverables. Fast turnaround. Ready?{" "}
+          <Link href="/contact" className="font-medium text-[var(--foreground)] underline-offset-2 hover:underline">
+            Hire a logo designer
+          </Link>{" "}
+          and send your brief.
         </p>
         <div className="mt-12">
           <PricingToggle />
+        </div>
+        <div className="mt-20 text-left">
+          <FAQ pagePath="/pricing" />
         </div>
         </div>
         </AnimateOnScroll>

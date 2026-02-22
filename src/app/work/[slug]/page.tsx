@@ -16,7 +16,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const item = getWorkBySlug(slug);
   if (!item) return { title: "Not Found", robots: { index: false, follow: true } };
   const title = `${item.title} | Work`;
-  const description = "Want a logo with this level of clarity? Start your brief and we'll build a direction that fits your brand.";
+  const description =
+    "Love this style? Start your logo brief and we'll create a direction that fits your brand.";
   return {
     title,
     description,

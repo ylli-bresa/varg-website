@@ -5,13 +5,13 @@ import { CTAButton } from "@/components/CTAButton";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Logo Design Pricing | Standard vs Premium Packages",
+  title: "Logo Design Pricing | Compare Packages",
   description:
-    "Compare Standard and Premium logo design packages. Clear deliverables, fast turnaround, and professional source files. Transparent pricing.",
+    "Compare logo design packages and pricing. Standard vs Premium—deliverables, turnaround, and files explained. Choose and start today.",
   openGraph: {
-    title: "Logo Design Pricing | Standard vs Premium Packages",
+    title: "Logo Design Pricing | Compare Packages",
     description:
-      "Compare Standard and Premium logo design packages. Clear deliverables and professional files.",
+      "Compare logo design packages and pricing. Standard vs Premium—deliverables, turnaround, and files explained. Choose and start today.",
     url: fullUrl("/logo-design-pricing"),
     type: "website",
     siteName: "VARG",
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Logo Design Pricing | Standard vs Premium Packages",
+    title: "Logo Design Pricing | Compare Packages",
     description:
-      "Compare logo design packages. Clear deliverables, professional files.",
+      "Compare logo design packages and pricing. Standard vs Premium—deliverables, turnaround, and files explained. Choose and start today.",
   },
   alternates: { canonical: fullUrl("/logo-design-pricing") },
   robots: { index: true, follow: true },

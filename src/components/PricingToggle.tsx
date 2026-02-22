@@ -94,7 +94,7 @@ export function PricingToggle() {
         </div>
 
         {/* Enterprise: no fill; black stroke (light), white stroke (dark) */}
-        <div className="flex h-full flex-col rounded-[20px] border-2 border-black bg-transparent p-6 text-left dark:border-white dark:bg-transparent md:col-span-2 lg:col-span-1">
+        <div className="flex h-full flex-col rounded-[20px] border border-black bg-transparent p-6 text-left dark:border-white dark:bg-transparent md:col-span-2 lg:col-span-1">
           <h3 className="text-sm font-medium text-stone-700 dark:text-stone-400">Enterprise</h3>
           <p className="mt-1 text-2xl font-bold text-stone-950 dark:text-stone-100">Custom</p>
           <p className="mt-2 text-sm text-stone-900 dark:text-stone-300">

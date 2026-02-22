@@ -3,7 +3,8 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Page not found",
-  description: "The page you're looking for doesn't exist or was moved. Return to VARG logo design services.",
+  description:
+    "This page isn't here. Head back to VARG for professional logo design services, portfolio, and pricing.",
   robots: { index: false, follow: true },
 };
 

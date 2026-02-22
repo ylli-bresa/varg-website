@@ -7,13 +7,13 @@ import { FinalCTA } from "@/components/home/FinalCTA";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Logo Design Portfolio | Recent Work & Case Studies",
+  title: "Logo Design Portfolio | Our Best Work",
   description:
-    "Explore our logo design portfolio. Professional logo work for startups and brands. Click any project to view details and request a similar direction.",
+    "Browse our logo design portfolio—real projects for startups and brands. Find inspiration and start your own logo project with VARG.",
   openGraph: {
-    title: "Logo Design Portfolio | Recent Work & Case Studies",
+    title: "Logo Design Portfolio | Our Best Work",
     description:
-      "Explore our logo design portfolio. Professional logo work for startups and brands. Click any project to view details and request a similar direction.",
+      "Browse our logo design portfolio—real projects for startups and brands. Find inspiration and start your own logo project with VARG.",
     url: fullUrl("/work"),
     type: "website",
     siteName: "VARG",
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Logo Design Portfolio | Recent Work & Case Studies",
+    title: "Logo Design Portfolio | Our Best Work",
     description:
-      "Explore our logo design portfolio. Professional logo work for startups and brands.",
+      "Browse our logo design portfolio—real projects for startups and brands. Find inspiration and start your own logo project with VARG.",
   },
   alternates: { canonical: fullUrl("/work") },
   robots: { index: true, follow: true },

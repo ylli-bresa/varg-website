@@ -5,13 +5,13 @@ import { CTAButton } from "@/components/CTAButton";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Custom Logo Design | Concepts Built for Your Brand",
+  title: "Custom Logo Design | Bespoke Concepts",
   description:
-    "Custom logo design with clear deliverables, fast turnaround, and professional source files. Concepts built for your brand. Start your brief in minutes.",
+    "Bespoke custom logo design from concept to final files. Clear process, fast turnaround. Tell us your brand and we'll deliver.",
   openGraph: {
-    title: "Custom Logo Design | Concepts Built for Your Brand",
+    title: "Custom Logo Design | Bespoke Concepts",
     description:
-      "Custom logo design with clear deliverables, fast turnaround, and professional source files.",
+      "Bespoke custom logo design from concept to final files. Clear process, fast turnaround. Tell us your brand and we'll deliver.",
     url: fullUrl("/custom-logo-design"),
     type: "website",
     siteName: "VARG",
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Logo Design | Concepts Built for Your Brand",
+    title: "Custom Logo Design | Bespoke Concepts",
     description:
-      "Custom logo design. Clear deliverables, fast turnaround, professional files.",
+      "Bespoke custom logo design from concept to final files. Clear process, fast turnaround. Tell us your brand and we'll deliver.",
   },
   alternates: { canonical: fullUrl("/custom-logo-design") },
   robots: { index: true, follow: true },

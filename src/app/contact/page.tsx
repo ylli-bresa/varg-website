@@ -8,13 +8,13 @@ import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 
 export const metadata: Metadata = {
-  title: "Contact | Start Your Logo Design Brief",
+  title: "Hire a Logo Designer | Get Your Custom Logo",
   description:
-    "Start your logo design brief in minutes. Quick email or guided form, attach references, select a package, and get a fast response from VARG.",
+    "Hire a logo designer who gets it. Share your brief, pick a package, and get a fast response. Start your logo project now.",
   openGraph: {
-    title: "Contact | Start Your Logo Design Brief",
+    title: "Hire a Logo Designer | Get Your Custom Logo",
     description:
-      "Start your logo design brief in minutes. Quick email or guided form. Get a fast response from VARG.",
+      "Hire a logo designer who gets it. Share your brief, pick a package, and get a fast response. Start your logo project now.",
     url: fullUrl("/contact"),
     type: "website",
     siteName: "VARG",
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact | Start Your Logo Design Brief",
+    title: "Hire a Logo Designer | Get Your Custom Logo",
     description:
-      "Start your logo design brief in minutes. Quick email or guided form.",
+      "Hire a logo designer who gets it. Share your brief, pick a package, and get a fast response. Start your logo project now.",
   },
   alternates: { canonical: fullUrl("/contact") },
   robots: { index: true, follow: true },

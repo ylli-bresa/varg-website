@@ -16,11 +16,11 @@ const baseUrl = site.baseUrl.replace(/\/$/, "");
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "VARG — Professional Logo Design Services",
+    default: "Logo Design Services | Premium Quality, Fast Delivery",
     template: "%s | VARG",
   },
   description:
-    "Professional logo design services for startups and brands. Custom logos, fast delivery, and premium quality by VARG.",
+    "Professional logo design for startups and brands. Custom logos, fast delivery, premium files. See our work and get a quote today.",
   keywords: [
     "logo design",
     "logo designer",
@@ -40,16 +40,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: site.name,
-    title: "VARG — Professional Logo Design Services",
+    title: "Logo Design Services | Premium Quality, Fast Delivery",
     description:
-      "Professional logo design services for startups and brands. Custom logos, fast delivery, and premium quality by VARG.",
+      "Professional logo design for startups and brands. Custom logos, fast delivery, premium files. See our work and get a quote today.",
     url: baseUrl,
   },
   twitter: {
     card: "summary_large_image",
-    title: "VARG — Professional Logo Design Services",
+    title: "Logo Design Services | Premium Quality, Fast Delivery",
     description:
-      "Professional logo design services for startups and brands. Custom logos, fast delivery, and premium quality by VARG.",
+      "Professional logo design for startups and brands. Custom logos, fast delivery, premium files. See our work and get a quote today.",
   },
   icons: { icon: "/favicon.ico" },
 };

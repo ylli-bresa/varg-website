@@ -72,3 +72,31 @@ export function BreadcrumbJsonLd({ items }: { items: { name: string; url: string
 export function fullUrlForSchema(path: string): string {
   return fullUrl(path);
 }
+
+export function FaqJsonLd({
+  items,
+  pageUrl,
+}: {
+  items: readonly { question: string; answer: string }[];
+  pageUrl: string;
+}) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    url: pageUrl,
+    mainEntity: items.map(({ question, answer }) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: answer,
+      },
+    })),
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}

@@ -55,7 +55,7 @@ export function WorkPreview() {
             href="/work"
             className="inline-flex items-center justify-center rounded-full bg-[var(--foreground)]/10 px-6 py-3 text-sm font-medium transition-all duration-200 hover:bg-[var(--foreground)]/15 focus:outline-none focus:ring-2 focus:ring-[var(--foreground)] focus:ring-offset-2 focus:ring-offset-[var(--background)]"
           >
-            View Work
+            View our logo design portfolio
           </Link>
         </div>
       </div>
