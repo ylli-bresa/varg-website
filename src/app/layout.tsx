@@ -4,40 +4,26 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { site } from "@/lib/site";
-
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
 });
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://example.com";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(baseUrl),
   title: {
-    default: `${site.name} | Logo Design Services`,
-    template: `%s | ${site.name}`,
+    default: "VARG — Professional Logo Design Services",
+    template: "%s | VARG",
   },
   description:
-    "Professional logo design built for clarity, speed, and trust. Explore our work, choose a package, and start your brief in minutes.",
-  keywords: ["logo design", "brand identity", "logo designer", "custom logo", "startup logo"],
-  authors: [{ name: site.name, url: baseUrl }],
-  creator: site.name,
-  openGraph: {
-    siteName: site.name,
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: { index: true, follow: true },
-  },
-  alternates: { canonical: baseUrl },
+    "Professional logo design services for startups and brands. Custom logos, fast delivery, and premium quality by VARG.",
+  keywords: [
+    "logo design",
+    "logo designer",
+    "professional logo design",
+    "branding services",
+    "custom logo design",
+  ],
+  metadataBase: new URL("https://vargdesign.com"),
   icons: { icon: "/favicon.ico" },
 };
 
