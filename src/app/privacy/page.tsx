@@ -7,11 +7,11 @@ import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "How VARG collects, uses, and protects your data when you use our logo design services. Your privacy matters to us.",
+    "Your data matters. See how we collect, use, and protect your information when you use our logo design services. Transparent and secure.",
   openGraph: {
     title: `Privacy Policy | ${site.name}`,
     description:
-      "How VARG collects, uses, and protects your data when you use our logo design services. Your privacy matters to us.",
+      "Your data matters. See how we collect, use, and protect your information when you use our logo design services. Transparent and secure.",
     url: fullUrl("/privacy"),
     type: "website",
     siteName: site.name,
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `Privacy Policy | ${site.name}`,
     description:
-      "How VARG collects, uses, and protects your data when you use our logo design services. Your privacy matters to us.",
+      "Your data matters. See how we collect, use, and protect your information when you use our logo design services. Transparent and secure.",
   },
   alternates: { canonical: fullUrl("/privacy") },
   robots: { index: true, follow: true },

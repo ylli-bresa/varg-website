@@ -7,11 +7,11 @@ import { BreadcrumbJsonLd } from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Logo Design for Startups | Launch-Ready Branding",
   description:
-    "Logo design for startups: fast, launch-ready, and built for founders. Get a professional logo without the agency wait.",
+    "Logo design for startups that move fast. Launch-ready in days, not months. Get a professional logo without the agency wait or price.",
   openGraph: {
     title: "Logo Design for Startups | Launch-Ready Branding",
     description:
-      "Logo design for startups: fast, launch-ready, and built for founders. Get a professional logo without the agency wait.",
+      "Logo design for startups that move fast. Launch-ready in days, not months. Get a professional logo without the agency wait or price.",
     url: fullUrl("/logo-design-for-startups"),
     type: "website",
     siteName: "VARG",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Logo Design for Startups | Launch-Ready Branding",
     description:
-      "Logo design for startups: fast, launch-ready, and built for founders. Get a professional logo without the agency wait.",
+      "Logo design for startups that move fast. Launch-ready in days, not months. Get a professional logo without the agency wait or price.",
   },
   alternates: { canonical: fullUrl("/logo-design-for-startups") },
   robots: { index: true, follow: true },

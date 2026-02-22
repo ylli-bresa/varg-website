@@ -7,11 +7,11 @@ import { BreadcrumbJsonLd } from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Logo Design Services for Your Brand",
   description:
-    "Logo design services tailored to your brand. Multiple concepts, revisions, and print-ready files. View our work and get started.",
+    "Logo design services built for clarity and impact. Multiple concepts, revisions, print-ready files. View our work and get your brand right.",
   openGraph: {
     title: "Logo Design Services for Your Brand",
     description:
-      "Logo design services tailored to your brand. Multiple concepts, revisions, and print-ready files. View our work and get started.",
+      "Logo design services built for clarity and impact. Multiple concepts, revisions, print-ready files. View our work and get your brand right.",
     url: fullUrl("/logo-design"),
     type: "website",
     siteName: "VARG",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Logo Design Services for Your Brand",
     description:
-      "Logo design services tailored to your brand. Multiple concepts, revisions, and print-ready files. View our work and get started.",
+      "Logo design services built for clarity and impact. Multiple concepts, revisions, print-ready files. View our work and get your brand right.",
   },
   alternates: { canonical: fullUrl("/logo-design") },
   robots: { index: true, follow: true },

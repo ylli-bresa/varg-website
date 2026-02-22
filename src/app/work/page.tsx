@@ -9,11 +9,11 @@ import { BreadcrumbJsonLd } from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Logo Design Portfolio | Our Best Work",
   description:
-    "Browse our logo design portfolio—real projects for startups and brands. Find inspiration and start your own logo project with VARG.",
+    "Explore our logo design portfolio. Real work for real brands. Find the direction that fits—then start your own project with VARG.",
   openGraph: {
     title: "Logo Design Portfolio | Our Best Work",
     description:
-      "Browse our logo design portfolio—real projects for startups and brands. Find inspiration and start your own logo project with VARG.",
+      "Explore our logo design portfolio. Real work for real brands. Find the direction that fits—then start your own project with VARG.",
     url: fullUrl("/work"),
     type: "website",
     siteName: "VARG",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Logo Design Portfolio | Our Best Work",
     description:
-      "Browse our logo design portfolio—real projects for startups and brands. Find inspiration and start your own logo project with VARG.",
+      "Explore our logo design portfolio. Real work for real brands. Find the direction that fits—then start your own project with VARG.",
   },
   alternates: { canonical: fullUrl("/work") },
   robots: { index: true, follow: true },

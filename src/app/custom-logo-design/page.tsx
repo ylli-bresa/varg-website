@@ -7,11 +7,11 @@ import { BreadcrumbJsonLd } from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Custom Logo Design | Bespoke Concepts",
   description:
-    "Bespoke custom logo design from concept to final files. Clear process, fast turnaround. Tell us your brand and we'll deliver.",
+    "Custom logo design from brief to final files. Bespoke concepts, clear process, fast delivery. Tell us your brand—we'll make it visible.",
   openGraph: {
     title: "Custom Logo Design | Bespoke Concepts",
     description:
-      "Bespoke custom logo design from concept to final files. Clear process, fast turnaround. Tell us your brand and we'll deliver.",
+      "Custom logo design from brief to final files. Bespoke concepts, clear process, fast delivery. Tell us your brand—we'll make it visible.",
     url: fullUrl("/custom-logo-design"),
     type: "website",
     siteName: "VARG",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Custom Logo Design | Bespoke Concepts",
     description:
-      "Bespoke custom logo design from concept to final files. Clear process, fast turnaround. Tell us your brand and we'll deliver.",
+      "Custom logo design from brief to final files. Bespoke concepts, clear process, fast delivery. Tell us your brand—we'll make it visible.",
   },
   alternates: { canonical: fullUrl("/custom-logo-design") },
   robots: { index: true, follow: true },

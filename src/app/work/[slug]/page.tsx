@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!item) return { title: "Not Found", robots: { index: false, follow: true } };
   const title = `${item.title} | Work`;
   const description =
-    "Love this style? Start your logo brief and we'll create a direction that fits your brand.";
+    "Love this logo? Start your logo design brief and we'll create a direction that fits your brand.";
   return {
     title,
     description,

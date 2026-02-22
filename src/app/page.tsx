@@ -14,11 +14,11 @@ import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 export const metadata: Metadata = {
   title: "Logo Design Services | Premium Quality, Fast Delivery",
   description:
-    "Premium logo design services with clear packages and fast turnaround. View our portfolio, pick a package, and start your brief in minutes.",
+    "Premium logo design services that deliver. Multiple concepts, fast turnaround, files ready to launch. See our portfolio and start your brief.",
   openGraph: {
     title: "Logo Design Services | Premium Quality, Fast Delivery",
     description:
-      "Premium logo design services with clear packages and fast turnaround. View our portfolio, pick a package, and start your brief in minutes.",
+      "Premium logo design services that deliver. Multiple concepts, fast turnaround, files ready to launch. See our portfolio and start your brief.",
     url: fullUrl("/"),
     type: "website",
     siteName: "VARG",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Logo Design Services | Premium Quality, Fast Delivery",
     description:
-      "Premium logo design services with clear packages and fast turnaround. View our portfolio, pick a package, and start your brief in minutes.",
+      "Premium logo design services that deliver. Multiple concepts, fast turnaround, files ready to launch. See our portfolio and start your brief.",
   },
   alternates: { canonical: fullUrl("/") },
   robots: { index: true, follow: true },

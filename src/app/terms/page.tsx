@@ -7,11 +7,11 @@ import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "Terms of Service for VARG. Rules and conditions for using our logo design services and website. Read before ordering.",
+    "Terms of Service for VARG logo design services. Clear rules for working with us. Read before you order—we keep it straightforward.",
   openGraph: {
     title: `Terms of Service | ${site.name}`,
     description:
-      "Terms of Service for VARG. Rules and conditions for using our logo design services and website. Read before ordering.",
+      "Terms of Service for VARG logo design services. Clear rules for working with us. Read before you order—we keep it straightforward.",
     url: fullUrl("/terms"),
     type: "website",
     siteName: site.name,
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `Terms of Service | ${site.name}`,
     description:
-      "Terms of Service for VARG. Rules and conditions for using our logo design services and website. Read before ordering.",
+      "Terms of Service for VARG logo design services. Clear rules for working with us. Read before you order—we keep it straightforward.",
   },
   alternates: { canonical: fullUrl("/terms") },
   robots: { index: true, follow: true },

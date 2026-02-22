@@ -7,11 +7,11 @@ import { BreadcrumbJsonLd } from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Logo Design Pricing | Compare Packages",
   description:
-    "Compare logo design packages and pricing. Standard vs Premium—deliverables, turnaround, and files explained. Choose and start today.",
+    "Compare logo design pricing side-by-side. Standard vs Premium packages, clear deliverables, no hidden fees. Choose yours and start today.",
   openGraph: {
     title: "Logo Design Pricing | Compare Packages",
     description:
-      "Compare logo design packages and pricing. Standard vs Premium—deliverables, turnaround, and files explained. Choose and start today.",
+      "Compare logo design pricing side-by-side. Standard vs Premium packages, clear deliverables, no hidden fees. Choose yours and start today.",
     url: fullUrl("/logo-design-pricing"),
     type: "website",
     siteName: "VARG",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Logo Design Pricing | Compare Packages",
     description:
-      "Compare logo design packages and pricing. Standard vs Premium—deliverables, turnaround, and files explained. Choose and start today.",
+      "Compare logo design pricing side-by-side. Standard vs Premium packages, clear deliverables, no hidden fees. Choose yours and start today.",
   },
   alternates: { canonical: fullUrl("/logo-design-pricing") },
   robots: { index: true, follow: true },

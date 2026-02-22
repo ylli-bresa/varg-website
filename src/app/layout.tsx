@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | VARG",
   },
   description:
-    "Professional logo design for startups and brands. Custom logos, fast delivery, premium files. See our work and get a quote today.",
+    "Get a standout brand with our logo design services. Trusted by 200+ startups—clear packages, fast delivery. Start your brief today.",
   keywords: [
     "logo design",
     "logo designer",
@@ -42,14 +42,14 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: "Logo Design Services | Premium Quality, Fast Delivery",
     description:
-      "Professional logo design for startups and brands. Custom logos, fast delivery, premium files. See our work and get a quote today.",
+      "Get a standout brand with our logo design services. Trusted by 200+ startups—clear packages, fast delivery. Start your brief today.",
     url: baseUrl,
   },
   twitter: {
     card: "summary_large_image",
     title: "Logo Design Services | Premium Quality, Fast Delivery",
     description:
-      "Professional logo design for startups and brands. Custom logos, fast delivery, premium files. See our work and get a quote today.",
+      "Get a standout brand with our logo design services. Trusted by 200+ startups—clear packages, fast delivery. Start your brief today.",
   },
   icons: { icon: "/favicon.ico" },
 };

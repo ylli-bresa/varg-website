@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Page not found",
   description:
-    "This page isn't here. Head back to VARG for professional logo design services, portfolio, and pricing.",
+    "This page wasn't found. Return to VARG for premium logo design services, our portfolio, and transparent pricing.",
   robots: { index: false, follow: true },
 };
 

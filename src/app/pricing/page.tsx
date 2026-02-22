@@ -9,11 +9,11 @@ import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 export const metadata: Metadata = {
   title: "Logo Design Pricing | Transparent Packages & Plans",
   description:
-    "See logo design pricing that fits your budget. Standard and Premium packages with clear deliverables. Start your project today.",
+    "Transparent logo design pricing—no surprises. Standard & Premium packages with clear deliverables. Get your project started in minutes.",
   openGraph: {
     title: "Logo Design Pricing | Transparent Packages & Plans",
     description:
-      "See logo design pricing that fits your budget. Standard and Premium packages with clear deliverables. Start your project today.",
+      "Transparent logo design pricing—no surprises. Standard & Premium packages with clear deliverables. Get your project started in minutes.",
     url: fullUrl("/pricing"),
     type: "website",
     siteName: "VARG",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Logo Design Pricing | Transparent Packages & Plans",
     description:
-      "See logo design pricing that fits your budget. Standard and Premium packages with clear deliverables. Start your project today.",
+      "Transparent logo design pricing—no surprises. Standard & Premium packages with clear deliverables. Get your project started in minutes.",
   },
   alternates: { canonical: fullUrl("/pricing") },
   robots: { index: true, follow: true },

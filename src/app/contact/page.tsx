@@ -10,11 +10,11 @@ import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 export const metadata: Metadata = {
   title: "Hire a Logo Designer | Get Your Custom Logo",
   description:
-    "Hire a logo designer who gets it. Share your brief, pick a package, and get a fast response. Start your logo project now.",
+    "Hire a logo designer who delivers. Share your brief, choose your package, get a fast response. Your brand deserves a pro—start now.",
   openGraph: {
     title: "Hire a Logo Designer | Get Your Custom Logo",
     description:
-      "Hire a logo designer who gets it. Share your brief, pick a package, and get a fast response. Start your logo project now.",
+      "Hire a logo designer who delivers. Share your brief, choose your package, get a fast response. Your brand deserves a pro—start now.",
     url: fullUrl("/contact"),
     type: "website",
     siteName: "VARG",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Hire a Logo Designer | Get Your Custom Logo",
     description:
-      "Hire a logo designer who gets it. Share your brief, pick a package, and get a fast response. Start your logo project now.",
+      "Hire a logo designer who delivers. Share your brief, choose your package, get a fast response. Your brand deserves a pro—start now.",
   },
   alternates: { canonical: fullUrl("/contact") },
   robots: { index: true, follow: true },
