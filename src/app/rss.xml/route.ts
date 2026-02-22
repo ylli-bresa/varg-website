@@ -1,32 +1,14 @@
+import { workItems } from "@/data/work";
 import { fullUrl, site } from "@/lib/site";
 
 type ProjectFeedItem = {
   title: string;
   slug: string;
   description: string;
-  publishedAt: string;
+  imageUrl: string;
+  imageMimeType: string;
+  publishedAt: Date;
 };
-
-const PROJECTS: ProjectFeedItem[] = [
-  {
-    title: "Nord Peak Coffee Rebrand",
-    slug: "nord-peak-coffee-rebrand",
-    description: "Logo and visual identity refresh for a specialty coffee brand.",
-    publishedAt: "2026-01-15T09:00:00.000Z",
-  },
-  {
-    title: "Axion Fitness Launch Identity",
-    slug: "axion-fitness-launch-identity",
-    description: "Complete launch-ready identity system for a premium fitness startup.",
-    publishedAt: "2025-12-04T14:30:00.000Z",
-  },
-  {
-    title: "Hearth & Stone Packaging Mark",
-    slug: "hearth-stone-packaging-mark",
-    description: "Custom packaging logomark and brand assets for a home goods label.",
-    publishedAt: "2025-10-22T11:15:00.000Z",
-  },
-];
 
 function escapeXml(value: string): string {
   return value
@@ -37,6 +19,26 @@ function escapeXml(value: string): string {
     .replace(/'/g, "&apos;");
 }
 
+function inferMimeType(path: string): string {
+  if (path.endsWith(".webp")) return "image/webp";
+  if (path.endsWith(".png")) return "image/png";
+  if (path.endsWith(".gif")) return "image/gif";
+  return "image/jpeg";
+}
+
+function getFeedProjects(): ProjectFeedItem[] {
+  const now = Date.now();
+  return workItems.map((item, index) => ({
+    title: item.title,
+    slug: item.slug,
+    description: `${item.title} from the Varg logo design portfolio.`,
+    imageUrl: fullUrl(item.imagePath),
+    imageMimeType: inferMimeType(item.imagePath),
+    // Deterministic fallback dates until real publish dates exist in data.
+    publishedAt: new Date(now - index * 24 * 60 * 60 * 1000),
+  }));
+}
+
 function projectToRssItem(project: ProjectFeedItem): string {
   const itemUrl = fullUrl(`/work/${project.slug}`);
   return [
@@ -45,18 +47,20 @@ function projectToRssItem(project: ProjectFeedItem): string {
     `<link>${escapeXml(itemUrl)}</link>`,
     `<guid isPermaLink="true">${escapeXml(itemUrl)}</guid>`,
     `<description>${escapeXml(project.description)}</description>`,
-    `<pubDate>${new Date(project.publishedAt).toUTCString()}</pubDate>`,
+    `<pubDate>${project.publishedAt.toUTCString()}</pubDate>`,
+    `<enclosure url="${escapeXml(project.imageUrl)}" length="0" type="${escapeXml(project.imageMimeType)}" />`,
+    `<media:content url="${escapeXml(project.imageUrl)}" medium="image" type="${escapeXml(project.imageMimeType)}" />`,
     "</item>",
   ].join("");
 }
 
 export async function GET(): Promise<Response> {
   const rssUrl = fullUrl("/rss.xml");
-  const itemsXml = PROJECTS.map(projectToRssItem).join("");
+  const itemsXml = getFeedProjects().map(projectToRssItem).join("");
 
   const xml = [
     '<?xml version="1.0" encoding="UTF-8"?>',
-    '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
+    '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">',
     "<channel>",
     `<title>${escapeXml(site.name)} Projects</title>`,
     `<link>${escapeXml(site.baseUrl)}</link>`,
