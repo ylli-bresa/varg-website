@@ -36,13 +36,13 @@ export function WorkPreview() {
                   />
                   {tag && (
                     <span
-                      className={`absolute bottom-2 left-2 w-max max-w-[calc(100%-1rem)] break-words rounded-2xl border px-3 py-2 text-center text-xs font-medium shadow-sm backdrop-blur-md ${
+                      className={`absolute bottom-2 left-2 w-max max-w-[calc(100%-1rem)] break-words rounded-2xl border px-2.5 py-1.5 text-center text-[10px] font-normal shadow-sm backdrop-blur-md ${
                         index === 0
-                          ? "border-[var(--foreground)]/20 bg-[var(--foreground)]/80 text-[var(--background)]"
-                          : "border-white/20 bg-[var(--foreground)]/5 text-[var(--foreground)] dark:border-white/10 dark:bg-[var(--foreground)]/10"
+                          ? "border-[var(--foreground)]/20 bg-[var(--foreground)]/80 text-[var(--background)]/90"
+                          : "border-white/20 bg-[var(--foreground)]/5 text-[var(--foreground)]/60 dark:border-white/10 dark:bg-[var(--foreground)]/10 dark:text-[var(--foreground)]/70"
                       }`}
                     >
-                      {tag.charAt(0).toUpperCase() + tag.slice(1)}
+                      + {tag.charAt(0).toUpperCase() + tag.slice(1)}
                     </span>
                   )}
                 </div>

@@ -38,6 +38,7 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true },
   },
   alternates: { canonical: baseUrl },
+  icons: { icon: "/favicon.ico" },
 };
 
 export const viewport = { width: "device-width", initialScale: 1 };
