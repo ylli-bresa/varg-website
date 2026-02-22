@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { fullUrl, site } from "@/lib/site";
 import { getWorkBySlug } from "@/data/work";
 import { CTAButton } from "@/components/CTAButton";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { WorkDetailCloseButton } from "@/components/WorkDetailCloseButton";
+import { WorkGridImage } from "@/components/WorkGridImage";
 import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -55,13 +55,13 @@ export default async function WorkDetailPage({ params }: Props) {
           </nav>
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <div className="relative aspect-square overflow-hidden rounded-[40px]">
-              <Image
+              <WorkGridImage
                 src={item.imagePath}
                 alt={item.title}
                 width={item.imageWidth ?? 600}
                 height={item.imageHeight ?? 600}
                 className="h-full w-full rounded-[40px] object-contain"
-                priority
+                loading="eager"
               />
             </div>
             <div className="flex flex-col justify-center text-left">

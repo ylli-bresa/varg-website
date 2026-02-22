@@ -1,4 +1,4 @@
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://example.com";
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://vargdesign.com";
 const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "yllibresa@gmail.com";
 
 /** Social links. Footer shows only instagram and pinterest when URLs are set. */

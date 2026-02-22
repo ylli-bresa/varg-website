@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import type { WorkItem } from "@/data/work";
+import { WorkGridImage } from "@/components/WorkGridImage";
 
 type MasonryGridProps = { items: WorkItem[] };
 
@@ -18,7 +18,7 @@ export function MasonryGrid({ items }: MasonryGridProps) {
           className="group mb-4 block break-inside-avoid overflow-hidden rounded-[20px] text-left outline-none transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--foreground)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)] hover:opacity-90"
           role="listitem"
         >
-          <Image
+          <WorkGridImage
             src={imagePath}
             alt={title}
             width={imageWidth}

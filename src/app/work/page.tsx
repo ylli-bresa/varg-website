@@ -5,7 +5,6 @@ import { workItems } from "@/data/work";
 import { MasonryGrid } from "@/components/MasonryGrid";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
-import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 
 export const metadata: Metadata = {
   title: "Logo Portfolio | Recent Work and Signature Styles",
@@ -38,7 +37,6 @@ export default function WorkPage() {
     <>
       <BreadcrumbJsonLd items={workBreadcrumbs} />
       <div className="px-4 pt-24 pb-20 sm:px-6 sm:pt-32">
-        <AnimateOnScroll>
         <div className="mx-auto max-w-6xl">
           <nav className="mb-8 text-center text-sm text-[var(--foreground)]/70 transition-colors duration-200" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-[var(--foreground)]">Home</Link>
@@ -49,15 +47,14 @@ export default function WorkPage() {
             <h1 className="text-3xl font-semibold tracking-tight text-[var(--foreground)] sm:text-4xl">
               Work
             </h1>
-          <p className="mx-auto mt-3 max-w-xl text-[var(--foreground)]/80">
-            A curated selection of marks built for clarity, recognition, and impact.
-          </p>
+            <p className="mx-auto mt-3 max-w-xl text-[var(--foreground)]/80">
+              A curated selection of marks built for clarity, recognition, and impact.
+            </p>
           </div>
           <div className="mt-12 text-left">
             <MasonryGrid items={workItems} />
           </div>
         </div>
-        </AnimateOnScroll>
       </div>
       <FinalCTA />
     </>
