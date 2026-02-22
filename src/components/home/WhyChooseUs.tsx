@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function WhyChooseUs() {
   const bullets = [
     "Delivery you can plan around",
@@ -23,6 +25,9 @@ export function WhyChooseUs() {
             </li>
           ))}
         </ul>
+        <p className="mt-8 text-sm text-[var(--foreground)]/70">
+          View our <Link href="/work" className="font-medium text-[var(--foreground)] underline-offset-2 hover:underline">logo design portfolio</Link> or check our <Link href="/pricing" className="font-medium text-[var(--foreground)] underline-offset-2 hover:underline">logo design pricing</Link> to get started.
+        </p>
       </div>
     </section>
   );

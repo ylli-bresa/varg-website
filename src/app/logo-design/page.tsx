@@ -67,21 +67,21 @@ export default function LogoDesignPage() {
           <section className="mt-12">
             <h2 className="text-xl font-semibold text-[var(--foreground)]">Pricing that stays simple</h2>
             <p className="mt-2 text-[var(--foreground)]/80">
-              <Link href="/pricing" className="underline hover:no-underline">See our Standard and Premium packages</Link> with clear deliverables and delivery times.
+              See our <Link href="/pricing" className="underline hover:no-underline">logo design pricing</Link> with clear deliverables and delivery times.
             </p>
           </section>
 
           <section className="mt-12">
             <h2 className="text-xl font-semibold text-[var(--foreground)]">See the work</h2>
             <p className="mt-2 text-[var(--foreground)]/80">
-              <Link href="/work" className="underline hover:no-underline">Browse our portfolio</Link> of recent logo work.
+              Browse our <Link href="/work" className="underline hover:no-underline">logo design portfolio</Link> of recent logo work.
             </p>
           </section>
 
           <section className="mt-12">
             <h2 className="text-xl font-semibold text-[var(--foreground)]">Start your brief</h2>
             <p className="mt-2 text-[var(--foreground)]/80">
-              Tell us what you need. We reply with next steps.
+              <Link href="/contact?start=1&mode=guided" className="underline hover:no-underline">Hire a logo designer</Link> and we&apos;ll reply with next steps.
             </p>
             <div className="mt-4">
               <CTAButton href="/contact?start=1&mode=guided">Get your Logo</CTAButton>

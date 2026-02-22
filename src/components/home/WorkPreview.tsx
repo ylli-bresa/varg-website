@@ -18,6 +18,7 @@ export function WorkPreview() {
           {items.map(({ slug, title, imagePath, imageWidth = 400, imageHeight = 400 }, index) => {
             const isLast = index === items.length - 1;
             const tag = workPreviewTags[index];
+            const isFirst = index === 0;
             return (
               <Link
                 key={slug}
@@ -33,6 +34,9 @@ export function WorkPreview() {
                     fill
                     className={`transition-all duration-300 group-hover:opacity-90 ${isLast ? "object-cover" : "object-contain"}`}
                     sizes="(max-width: 640px) 50vw, 33vw"
+                    priority={isFirst}
+                    loading={isFirst ? undefined : "lazy"}
+                    fetchPriority={isFirst ? "high" : undefined}
                   />
                   {tag && (
                     <span

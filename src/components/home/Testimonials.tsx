@@ -61,7 +61,7 @@ export function Testimonials() {
                     <footer className="mt-3 flex items-center gap-3 text-xs text-[var(--foreground)]/70 sm:text-sm">
                       {(logoLabel || logoPath) && (
                         <span className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-[6px] bg-[var(--foreground)]/10 text-[10px] font-semibold uppercase tracking-wide text-[var(--foreground)]/80">
-                          {logoPath ? <Image src={logoPath} alt="" width={32} height={32} className="object-contain p-0.5" /> : logoLabel}
+                          {logoPath ? <Image src={logoPath} alt={`${company} logo`} width={32} height={32} className="object-contain p-0.5" loading="lazy" /> : logoLabel}
                         </span>
                       )}
                       <span>

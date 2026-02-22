@@ -48,7 +48,7 @@ export default function TermsPage() {
 
           <div className="prose prose-neutral mt-10 max-w-none dark:prose-invert">
           <p className="text-[var(--foreground)]/80">
-            These Terms of Service (“Terms”) govern your use of the website and services operated by {site.name} (“we”, “us”, “our”). By using our site or engaging our logo design and brand identity services, you agree to these Terms.
+            These Terms of Service (“Terms”) govern your use of the website and services operated by {site.name} (“we”, “us”, “our”). By using our site or engaging our logo design and brand identity services, you agree to these Terms. For our logo design services see the <Link href="/" className="font-medium text-[var(--foreground)] underline-offset-2 hover:underline">homepage</Link>; for <Link href="/pricing" className="font-medium text-[var(--foreground)] underline-offset-2 hover:underline">logo design pricing</Link> or to <Link href="/contact" className="font-medium text-[var(--foreground)] underline-offset-2 hover:underline">hire a logo designer</Link>, see the pricing and contact pages.
           </p>
 
           <h2 className="mt-8 text-xl font-semibold text-[var(--foreground)]">1. Services</h2>

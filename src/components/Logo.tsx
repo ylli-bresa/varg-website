@@ -18,7 +18,7 @@ export function Logo({ className = "h-7 w-auto" }: LogoProps) {
 
   if (!mounted) {
     return (
-      <span className="text-lg font-semibold tracking-tight text-[var(--foreground)]">
+      <span className="inline-block min-h-[28px] min-w-[120px] text-lg font-semibold tracking-tight text-[var(--foreground)]" aria-hidden>
         {site.name}
       </span>
     );

@@ -64,7 +64,7 @@ export default function LogoDesignForStartupsPage() {
           <section className="mt-12">
             <h2 className="text-xl font-semibold text-[var(--foreground)]">Packages that fit</h2>
             <p className="mt-2 text-[var(--foreground)]/80">
-              <Link href="/pricing" className="underline hover:no-underline">Standard and Premium</Link> options with fixed deliverables and delivery times. Pick one, start your brief, and get a logo you can launch with.
+              Our <Link href="/pricing" className="underline hover:no-underline">logo design pricing</Link> offers Standard and Premium options with fixed deliverables and delivery times. See our <Link href="/work" className="underline hover:no-underline">logo design portfolio</Link> or <Link href="/contact?start=1&mode=guided" className="underline hover:no-underline">hire a logo designer</Link> to get started.
             </p>
           </section>
 

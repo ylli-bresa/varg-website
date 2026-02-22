@@ -57,7 +57,7 @@ export default function LogoDesignPricingPage() {
           <section className="mt-12">
             <h2 className="text-xl font-semibold text-[var(--foreground)]">Compare and choose</h2>
             <p className="mt-2 text-[var(--foreground)]/80">
-              <Link href="/pricing" className="underline hover:no-underline">See the full pricing page</Link> for deliverables and timelines. Then start your brief and we will take it from there.
+              See our full <Link href="/pricing" className="underline hover:no-underline">logo design pricing</Link> for deliverables and timelines. Browse our <Link href="/work" className="underline hover:no-underline">logo design portfolio</Link> or <Link href="/contact" className="underline hover:no-underline">hire a logo designer</Link> to start your brief.
             </p>
             <div className="mt-6 flex flex-wrap gap-4">
               <CTAButton href="/pricing">See Pricing</CTAButton>

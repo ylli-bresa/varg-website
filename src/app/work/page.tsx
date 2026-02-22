@@ -50,7 +50,7 @@ export default function WorkPage() {
               Work
             </h1>
             <p className="mx-auto mt-3 max-w-xl text-[var(--foreground)]/80">
-              A curated selection of marks built for clarity, recognition, and impact.
+              A curated selection of marks built for clarity, recognition, and impact. See our <Link href="/pricing" className="font-medium text-[var(--foreground)] underline-offset-2 hover:underline">logo design pricing</Link> or <Link href="/contact" className="font-medium text-[var(--foreground)] underline-offset-2 hover:underline">hire a logo designer</Link> to start your project.
             </p>
           </div>
           <div className="mt-12 text-left">

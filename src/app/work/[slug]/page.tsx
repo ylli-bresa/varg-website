@@ -14,7 +14,27 @@ type Props = { params: Promise<{ slug: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const item = getWorkBySlug(slug);
-  if (!item) return { title: "Not Found", robots: { index: false, follow: true } };
+  if (!item) {
+    return {
+      title: "Not Found",
+      description: "This project was not found. Browse our logo design portfolio or return to Varg Design.",
+      alternates: { canonical: fullUrl("/work") },
+      openGraph: {
+        title: "Not Found | Varg Design",
+        description: "This project was not found. Browse our logo design portfolio or return to Varg Design.",
+        url: fullUrl("/work"),
+        type: "website",
+        siteName: "VARG",
+        locale: "en_US",
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: "Not Found | Varg Design",
+        description: "This project was not found. Browse our logo design portfolio or return to Varg Design.",
+      },
+      robots: { index: false, follow: true },
+    };
+  }
   const title = `${item.title} | Work`;
   const description =
     "Love this logo? Start your logo design brief and we'll create a direction that fits your brand.";
@@ -79,7 +99,7 @@ export default async function WorkDetailPage({ params }: Props) {
                 Ready for a logo with this clarity?
               </h1>
               <p className="mt-4 text-[var(--foreground)]/80">
-                Want a logo with this level of clarity? Start your brief and we'll build a direction that fits your brand.
+                Want a logo with this level of clarity? See our <Link href="/pricing" className="font-medium text-[var(--foreground)] underline-offset-2 hover:underline">logo design pricing</Link> or start your brief and we&apos;ll build a direction that fits your brand.
               </p>
               <div className="mt-8 flex flex-row flex-wrap gap-4">
                 <CTAButton href="/contact" variant="secondary" className="min-w-0 flex-1">

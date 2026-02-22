@@ -51,7 +51,7 @@ export default function ContactPage() {
             Contact
           </h1>
         <p className="mt-3 text-[var(--foreground)]/80">
-          Start your request the way you prefer. Quick email or guided form.
+          Start your request the way you prefer. Quick email or guided form. Check our <Link href="/pricing" className="font-medium text-[var(--foreground)] underline-offset-2 hover:underline">logo design pricing</Link> or browse our <Link href="/work" className="font-medium text-[var(--foreground)] underline-offset-2 hover:underline">logo design portfolio</Link> first if you like.
         </p>
         <div className="mt-10 rounded-[20px] bg-[var(--foreground)]/[0.06] p-6 dark:bg-[var(--foreground)]/10">
           <Suspense fallback={<div className="text-[var(--foreground)]/60">Loading…</div>}>

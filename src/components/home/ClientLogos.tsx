@@ -14,7 +14,7 @@ export function ClientLogos() {
         <div className="mt-10 flex flex-wrap items-center justify-center gap-x-14 gap-y-10">
           {clientLogos.map(({ name, logoPath }) => (
             <div key={name} className="flex h-14 w-32 items-center justify-center opacity-90 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0">
-              <Image src={logoPath} alt={name} width={128} height={56} className="object-contain" />
+              <Image src={logoPath} alt={name} width={128} height={56} className="object-contain" loading="lazy" />
             </div>
           ))}
         </div>

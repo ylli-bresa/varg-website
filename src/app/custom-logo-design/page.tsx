@@ -70,8 +70,7 @@ export default function CustomLogoDesignPage() {
 
           <section className="mt-12">
             <p className="text-[var(--foreground)]/80">
-              <Link href="/pricing" className="underline hover:no-underline">View pricing</Link> and{" "}
-              <Link href="/contact?start=1&mode=guided" className="underline hover:no-underline">start your brief</Link>.
+              View our <Link href="/pricing" className="underline hover:no-underline">logo design pricing</Link> and <Link href="/contact?start=1&mode=guided" className="underline hover:no-underline">hire a logo designer</Link> to start your brief. See our <Link href="/work" className="underline hover:no-underline">logo design portfolio</Link> for recent work.
             </p>
             <div className="mt-4">
               <CTAButton href="/contact?start=1&mode=guided">Get your Logo</CTAButton>

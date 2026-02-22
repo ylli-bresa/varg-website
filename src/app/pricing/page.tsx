@@ -50,7 +50,7 @@ export default function PricingPage() {
             Pricing
           </h1>
         <p className="mt-3 text-[var(--foreground)]/80">
-          Two packages. Clear deliverables. Fast turnaround. Ready?{" "}
+          Two packages. Clear deliverables. Fast turnaround. See our <Link href="/work" className="font-medium text-[var(--foreground)] underline-offset-2 hover:underline">logo design portfolio</Link> for recent work. Ready?{" "}
           <Link href="/contact" className="font-medium text-[var(--foreground)] underline-offset-2 hover:underline">
             Hire a logo designer
           </Link>{" "}
