@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --muted: #525252;
+}
+
+.dark {
+  --background: #0c0c0c;
+  --foreground: #e5e5e5;
+  --muted: #737373;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+* {
+  font-family: inherit;
+  box-shadow: none !important;
+}
+
+/* Restore focus visibility without box-shadow (outline instead) */
+:focus-visible {
+  outline: 2px solid var(--foreground);
+  outline-offset: 2px;
+}
+
+/* Hero section: no shadows on section or any descendant */
+.hero-section,
+.hero-section * {
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+/* Why Choose Us / Process cards: solid fill, black bg + white text on hover (light), white bg + black text (dark) */
+.why-card:hover {
+  background-color: #0a0a0a;
+  color: #ffffff;
+}
+.why-card:hover * {
+  color: #ffffff;
+}
+.dark .why-card:hover {
+  background-color: #ffffff;
+  color: #0a0a0a;
+}
+.dark .why-card:hover * {
+  color: #0a0a0a;
+}
+
+/* ---- Animations (GPU-friendly: transform + opacity, smooth & fade-led) ---- */
+/* Easing: gentle, smooth curves */
+:root {
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-fade: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in-down {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-hero {
+  animation: fade-in-up 0.9s var(--ease-smooth) forwards;
+}
+.animate-hero-tagline { animation: fade-in 0.7s var(--ease-fade) 0.15s both; }
+.animate-hero-badges { animation: fade-in 0.7s var(--ease-fade) 0.28s both; }
+.animate-hero-cta { animation: fade-in 0.7s var(--ease-fade) 0.4s both; }
+
+/* Scroll-triggered reveal: fade-first, subtle lift */
+.animate-in-view {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.8s var(--ease-fade), transform 0.8s var(--ease-smooth);
+}
+.animate-in-view-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children: smooth fade, light motion */
+.animate-in-view-visible .stagger-children .stagger-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+.stagger-children .stagger-item {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.7s var(--ease-fade), transform 0.7s var(--ease-smooth);
+}
+.animate-in-view-visible .stagger-children .stagger-item:nth-child(1) { transition-delay: 0ms; }
+.animate-in-view-visible .stagger-children .stagger-item:nth-child(2) { transition-delay: 70ms; }
+.animate-in-view-visible .stagger-children .stagger-item:nth-child(3) { transition-delay: 140ms; }
+.animate-in-view-visible .stagger-children .stagger-item:nth-child(4) { transition-delay: 210ms; }
+.animate-in-view-visible .stagger-children .stagger-item:nth-child(5) { transition-delay: 280ms; }
+.animate-in-view-visible .stagger-children .stagger-item:nth-child(6) { transition-delay: 350ms; }
+.animate-in-view-visible .stagger-children .stagger-item:nth-child(7) { transition-delay: 420ms; }
+.animate-in-view-visible .stagger-children .stagger-item:nth-child(8) { transition-delay: 490ms; }
+.animate-in-view-visible .stagger-children .stagger-item:nth-child(9) { transition-delay: 560ms; }
+
+/* Interactive transitions */
+.transition-smooth {
+  transition: color 0.3s var(--ease-fade), background-color 0.3s var(--ease-fade), opacity 0.3s var(--ease-fade), transform 0.3s var(--ease-smooth);
+}
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+.hover-lift:active {
+  transform: translateY(0);
+}
+
+/* Testimonial slide: smooth fade */
+.testimonial-slide {
+  transition: opacity 0.65s var(--ease-fade);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

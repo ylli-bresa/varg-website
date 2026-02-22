@@ -1,0 +1,65 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Suspense } from "react";
+import { fullUrl } from "@/lib/site";
+import { ContactToggle } from "@/components/contact/ContactToggle";
+import { ContactSocialCard } from "@/components/contact/ContactSocialCard";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import { AnimateOnScroll } from "@/components/AnimateOnScroll";
+
+export const metadata: Metadata = {
+  title: "Contact | Start Your Logo Brief",
+  description:
+    "Start a logo design brief in minutes. Choose Quick Email or our guided form, attach references, select a package, and send your request.",
+  openGraph: {
+    title: "Contact | Start Your Logo Brief",
+    description:
+      "Start a logo design brief in minutes. Choose Quick Email or our guided form, attach references, select a package, and send your request.",
+    url: fullUrl("/contact"),
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact | Start Your Logo Brief",
+    description:
+      "Start a logo design brief in minutes. Choose Quick Email or our guided form, attach references, select a package, and send your request.",
+  },
+  alternates: { canonical: fullUrl("/contact") },
+  robots: { index: true, follow: true },
+};
+
+const contactBreadcrumbs = [
+  { name: "Home", url: fullUrl("/") },
+  { name: "Contact", url: fullUrl("/contact") },
+];
+
+export default function ContactPage() {
+  return (
+    <>
+      <BreadcrumbJsonLd items={contactBreadcrumbs} />
+      <div className="px-4 pt-24 pb-20 sm:px-6 sm:pt-32">
+        <AnimateOnScroll>
+        <div className="mx-auto max-w-xl text-center">
+          <nav className="mb-8 text-sm text-[var(--foreground)]/70 transition-colors duration-200" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-[var(--foreground)]">Home</Link>
+            <span className="mx-2">/</span>
+            <span className="text-[var(--foreground)]">Contact</span>
+          </nav>
+          <h1 className="text-3xl font-semibold tracking-tight text-[var(--foreground)] sm:text-4xl">
+            Contact
+          </h1>
+        <p className="mt-3 text-[var(--foreground)]/80">
+          Start your request the way you prefer. Quick email or guided form.
+        </p>
+        <div className="mt-10 rounded-[20px] bg-[var(--foreground)]/[0.06] p-6 dark:bg-[var(--foreground)]/10">
+          <Suspense fallback={<div className="text-[var(--foreground)]/60">Loading…</div>}>
+            <ContactToggle />
+          </Suspense>
+        </div>
+        <ContactSocialCard />
+        </div>
+        </AnimateOnScroll>
+      </div>
+    </>
+  );
+}
