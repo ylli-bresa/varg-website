@@ -5,6 +5,7 @@ import { site } from "@/lib/site";
 const subject = "Logo Design Request";
 
 export function QuickEmailForm() {
+  if (!site.contactEmail) return null;
   const mailto = `mailto:${site.contactEmail}?subject=${encodeURIComponent(subject)}`;
 
   return (

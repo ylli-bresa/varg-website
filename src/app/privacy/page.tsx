@@ -63,7 +63,7 @@ export default function PrivacyPage() {
 
           <h2 className="mt-8 text-xl font-semibold text-[var(--foreground)]">3. Email and Communications</h2>
           <p className="mt-2 text-[var(--foreground)]/80">
-            Form submissions are sent via our email service provider (Resend). We use your email only to communicate about your project and our services. You can contact us at {site.contactEmail} to request access, correction, or deletion of your data.
+            Form submissions are sent via our email service provider (Resend). We use your email only to communicate about your project and our services. You can contact us via our <Link href="/contact" className="font-medium text-[var(--foreground)] underline hover:no-underline">contact page</Link> to request access, correction, or deletion of your data.
           </p>
 
           <h2 className="mt-8 text-xl font-semibold text-[var(--foreground)]">4. Cookies and Tracking</h2>
@@ -78,7 +78,7 @@ export default function PrivacyPage() {
 
           <h2 className="mt-8 text-xl font-semibold text-[var(--foreground)]">6. Your Rights</h2>
           <p className="mt-2 text-[var(--foreground)]/80">
-            Depending on your location, you may have rights to access, correct, delete, or port your personal data, or to object to or restrict processing. Contact us at {site.contactEmail} to exercise these rights.
+            Depending on your location, you may have rights to access, correct, delete, or port your personal data, or to object to or restrict processing. Contact us via our <Link href="/contact" className="font-medium text-[var(--foreground)] underline hover:no-underline">contact page</Link> to exercise these rights.
           </p>
 
           <h2 className="mt-8 text-xl font-semibold text-[var(--foreground)]">7. Third-Party Links</h2>
@@ -93,10 +93,8 @@ export default function PrivacyPage() {
 
           <h2 className="mt-8 text-xl font-semibold text-[var(--foreground)]">9. Contact</h2>
           <p className="mt-2 text-[var(--foreground)]/80">
-            For privacy-related questions or requests, contact us at{" "}
-            <a href={`mailto:${site.contactEmail}`} className="text-[var(--foreground)] underline hover:no-underline">
-              {site.contactEmail}
-            </a>.
+            For privacy-related questions or requests, contact us via our{" "}
+            <Link href="/contact" className="font-medium text-[var(--foreground)] underline hover:no-underline">contact page</Link>.
           </p>
           </div>
 

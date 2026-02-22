@@ -109,13 +109,19 @@ export default async function WorkDetailPage({ params }: Props) {
                   Get your Logo
                 </CTAButton>
               </div>
-              <div className="mt-8">
-                <p className="mb-2 text-sm font-medium text-[var(--foreground)]/80">Social medias</p>
-                <div className="flex flex-wrap gap-4 text-sm text-[var(--foreground)]/60">
-                  <a href={site.social.instagram} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-[var(--foreground)]" aria-label="Instagram">Instagram</a>
-                  <a href={site.social.pinterest} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-[var(--foreground)]" aria-label="Pinterest">Pinterest</a>
+              {(site.social.instagram || site.social.pinterest) && (
+                <div className="mt-8">
+                  <p className="mb-2 text-sm font-medium text-[var(--foreground)]/80">Social medias</p>
+                  <div className="flex flex-wrap gap-4 text-sm text-[var(--foreground)]/60">
+                    {site.social.instagram && (
+                      <a href={site.social.instagram} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-[var(--foreground)]" aria-label="Instagram">Instagram</a>
+                    )}
+                    {site.social.pinterest && (
+                      <a href={site.social.pinterest} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-[var(--foreground)]" aria-label="Pinterest">Pinterest</a>
+                    )}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>

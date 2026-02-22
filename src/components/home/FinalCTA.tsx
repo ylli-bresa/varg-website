@@ -14,7 +14,7 @@ export function FinalCTA() {
             Start the brief. Pick a package. Get delivery you can trust.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <CTAButton href="/contact?start=1&mode=guided">Hire a logo designer</CTAButton>
+            <CTAButton href="/contact?start=1&mode=guided">Get your Logo</CTAButton>
             <Link
               href="/pricing"
               className="text-sm font-medium text-[var(--foreground)]/70 underline-offset-2 transition-colors duration-200 hover:text-[var(--foreground)] hover:underline"

@@ -98,10 +98,8 @@ export default function TermsPage() {
 
           <h2 className="mt-8 text-xl font-semibold text-[var(--foreground)]">10. Contact</h2>
           <p className="mt-2 text-[var(--foreground)]/80">
-            For questions about these Terms, contact us at{" "}
-            <a href={`mailto:${site.contactEmail}`} className="text-[var(--foreground)] underline hover:no-underline">
-              {site.contactEmail}
-            </a>.
+            For questions about these Terms, contact us via our{" "}
+            <Link href="/contact" className="font-medium text-[var(--foreground)] underline hover:no-underline">contact page</Link>.
           </p>
           </div>
 

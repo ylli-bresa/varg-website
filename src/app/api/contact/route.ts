@@ -74,17 +74,11 @@ export async function POST(req: NextRequest) {
     }
 
     const brief = parsed.data;
-    const toEmail = site.contactEmail;
+    const toEmail = site.contactEmail?.trim() || process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim();
     const apiKey = process.env.RESEND_API_KEY;
 
-    if (!apiKey) {
-      return NextResponse.json(
-        {
-          message:
-            "Email is not configured. Add RESEND_API_KEY to .env.local (get a key at resend.com), then restart the dev server.",
-        },
-        { status: 503 }
-      );
+    if (!apiKey || !toEmail) {
+      return NextResponse.json({ message: "Service temporarily unavailable. Please try again later." }, { status: 503 });
     }
 
     const resend = new Resend(apiKey);
@@ -116,17 +110,9 @@ export async function POST(req: NextRequest) {
     });
 
     if (error) {
-      // eslint-disable-next-line no-console
-      console.error("[Contact brief] Resend error:", error);
-      const reason = error.message ?? "Send failed.";
-      return NextResponse.json(
-        { message: `Email failed: ${reason} Check resend.com dashboard and spam folder.` },
-        { status: 500 }
-      );
+      return NextResponse.json({ message: "Something went wrong. Please try again later." }, { status: 500 });
     }
 
-    // eslint-disable-next-line no-console
-    console.log("[Contact brief] Sent to", toEmail, "id:", data?.id);
     return NextResponse.json({ ok: true });
   } catch {
     return NextResponse.json({ message: "Something went wrong." }, { status: 500 });
