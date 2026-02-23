@@ -22,6 +22,13 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      // Favicon: short cache so updates are visible quickly
+      {
+        source: "/favicon.ico",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=300, s-maxage=300" },
+        ],
+      },
       // Cache static media in public (images, logos)
       {
         source: "/(work|logos|placeholders)/:path*",

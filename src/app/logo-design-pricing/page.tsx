@@ -50,7 +50,7 @@ export default function LogoDesignPricingPage() {
           <section className="mt-10 space-y-6">
             <h2 className="text-xl font-semibold text-[var(--foreground)]">Two packages</h2>
             <p className="text-[var(--foreground)]/80">
-              Standard (€139) is built for startups and small businesses: 2 concepts, 2 revision rounds, and delivery in 3 to 5 days. Premium (€279) adds more concepts, unlimited revisions, source files, color and typography guidance, social versions, and priority delivery in 1 to 3 days.
+              Standard ($199) is built for startups and growing businesses that need a professional logo foundation: 2 custom logo concepts, unlimited revisions, high-resolution PNG and JPG, SVG, transparent and black-and-white versions, delivery in 3–5 days. Premium ($399) is for brands that want a complete identity ready for launch: 4 concepts, full source files (AI, SVG, PDF), color palette and typography guide, social media versions, priority delivery in 1–3 days, full commercial usage license.
             </p>
           </section>
 

@@ -9,21 +9,21 @@ const CheckIcon = ({ className = "text-[var(--foreground)]/70" }: { className?: 
 );
 
 const standardIncludes = [
-  "2 logo concepts",
-  "2 revision rounds",
-  "High-resolution PNG + JPG files",
-  "Transparent background files",
-  "Black and white versions",
+  "2 custom logo concepts",
+  "Unlimited revisions",
+  "High-resolution PNG and JPG files",
+  "SVG vector file",
+  "Transparent background versions",
+  "Black and white logo variations",
 ];
 
 const premiumIncludes = [
-  "4 logo concepts",
+  "4 custom logo concepts",
   "Unlimited revisions",
-  "Source files (AI, SVG, PDF)",
-  "Color palette + typography guide",
+  "Full source files (AI, SVG, PDF)",
+  "Color palette and typography guide",
   "Social media logo versions",
-  "Priority delivery (1 to 3 days)",
-  "Commercial usage license",
+  "Full commercial usage license",
 ];
 
 const enterpriseIncludes = [
@@ -42,8 +42,8 @@ export function PricingToggle() {
         {/* Standard: fill #222 (light), dark gray (dark) */}
         <div className="flex h-full flex-col rounded-[20px] bg-[#222222] p-6 text-left dark:bg-neutral-800">
           <h3 className="text-sm font-medium text-neutral-400 dark:text-neutral-400">Standard</h3>
-          <p className="mt-1 text-2xl font-bold text-white dark:text-neutral-100">€139</p>
-          <p className="mt-2 text-sm text-neutral-300 dark:text-neutral-300">Best for startups and small businesses</p>
+          <p className="mt-1 text-2xl font-bold text-white dark:text-neutral-100">$199</p>
+          <p className="mt-2 text-sm text-neutral-300 dark:text-neutral-300">Best for startups and growing businesses that need a professional logo foundation</p>
           <ul className="mt-6 space-y-2 text-sm text-neutral-200 dark:text-neutral-300" role="list">
             {standardIncludes.map((item) => (
               <li key={item} className="flex items-start gap-2">
@@ -52,7 +52,7 @@ export function PricingToggle() {
               </li>
             ))}
           </ul>
-          <p className="mt-4 text-sm font-medium text-neutral-200 dark:text-neutral-200">Delivery: 3 to 5 days</p>
+          <p className="mt-4 text-sm font-medium text-neutral-200 dark:text-neutral-200">Delivery: 3–5 days</p>
           <div className="mt-auto pt-6">
             <Link
               href="/contact?start=1&mode=guided&package=standard"
@@ -69,9 +69,9 @@ export function PricingToggle() {
             Popular
           </span>
           <h3 className="text-sm font-medium text-neutral-200 dark:text-neutral-500">Premium</h3>
-          <p className="mt-1 text-2xl font-bold text-white dark:text-neutral-900">€279</p>
+          <p className="mt-1 text-2xl font-bold text-white dark:text-neutral-900">$399</p>
           <p className="mt-2 text-sm text-neutral-100 dark:text-neutral-600">
-            Best for serious brands that want full identity quality
+            Best for brands that want a complete identity ready for launch
           </p>
           <p className="mt-2 text-xs text-neutral-300 dark:text-neutral-500">Everything in Standard plus:</p>
           <ul className="mt-4 space-y-2 text-sm text-neutral-100 dark:text-neutral-700" role="list">
@@ -82,7 +82,7 @@ export function PricingToggle() {
               </li>
             ))}
           </ul>
-          <p className="mt-4 text-sm font-medium text-white dark:text-neutral-900">Delivery: 1 to 3 days</p>
+          <p className="mt-4 text-sm font-medium text-white dark:text-neutral-900">Delivery: 1–3 days</p>
           <div className="mt-auto pt-6">
             <Link
               href="/contact?start=1&mode=guided&package=premium"
