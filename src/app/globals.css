@@ -1,15 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --muted: #525252;
+  --background: #0c0c0c;
+  --foreground: #e5e5e5;
+  --muted: #737373;
+  color-scheme: dark;
 }
 
 .dark {
   --background: #0c0c0c;
   --foreground: #e5e5e5;
   --muted: #737373;
+  color-scheme: dark;
 }
 
 @theme inline {
@@ -22,6 +24,20 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+/* Same look on Android: tap highlight, smooth scroll */
+html {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+/* Use dynamic viewport height so Android address bar doesn't cause layout shift */
+main {
+  min-height: 100dvh;
 }
 
 * {
@@ -42,19 +58,12 @@ body {
   text-shadow: none !important;
 }
 
-/* Why Choose Us / Process cards: solid fill, black bg + white text on hover (light), white bg + black text (dark) */
+/* Why Choose Us / Process cards: dark theme hover = white bg + black text */
 .why-card:hover {
-  background-color: #0a0a0a;
-  color: #ffffff;
-}
-.why-card:hover * {
-  color: #ffffff;
-}
-.dark .why-card:hover {
   background-color: #ffffff;
   color: #0a0a0a;
 }
-.dark .why-card:hover * {
+.why-card:hover * {
   color: #0a0a0a;
 }
 

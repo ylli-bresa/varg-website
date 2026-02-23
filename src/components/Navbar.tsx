@@ -3,11 +3,8 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { navItems } from "@/lib/site";
-import { ThemeToggle } from "./ThemeToggle";
 import { Logo } from "./Logo";
 import { site } from "@/lib/site";
-
-const SHOW_THEME_TOGGLE = false; // set to true to show light/dark mode switch
 
 export function Navbar() {
   const [visible, setVisible] = useState(true);
@@ -70,7 +67,6 @@ export function Navbar() {
               </li>
             ))}
           </ul>
-          {SHOW_THEME_TOGGLE && <ThemeToggle />}
           <Link
             href="/contact?start=1&mode=guided"
             className="inline-flex items-center justify-center rounded-full bg-[var(--foreground)] px-4 py-2 text-sm font-medium text-[var(--background)] hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[var(--foreground)] focus:ring-offset-2 focus:ring-offset-[var(--background)]"
@@ -81,7 +77,6 @@ export function Navbar() {
 
         {/* Mobile: burger button */}
         <div className="flex items-center gap-2 sm:hidden">
-          {SHOW_THEME_TOGGLE && <ThemeToggle />}
           <button
             type="button"
             onClick={() => setMobileOpen((o) => !o)}

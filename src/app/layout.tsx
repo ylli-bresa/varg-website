@@ -60,7 +60,11 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport = { width: "device-width", initialScale: 1 };
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#0c0c0c",
+};
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -86,8 +90,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark" suppressHydrationWarning>
       <head>
+        <meta name="theme-color" content="#0c0c0c" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}

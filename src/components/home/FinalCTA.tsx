@@ -1,11 +1,12 @@
 import Link from "next/link";
+import { site } from "@/lib/site";
 import { CTAButton } from "@/components/CTAButton";
-import { ContactSocialCard } from "@/components/contact/ContactSocialCard";
+import { SocialMediasCard } from "@/components/contact/SocialMediasCard";
 
 export function FinalCTA() {
   return (
     <section className="px-4 py-24 shadow-none sm:px-6 sm:py-32" aria-labelledby="final-cta-heading">
-      <div className="mx-auto max-w-2xl shadow-none">
+      <div className="mx-auto max-w-2xl space-y-6 shadow-none">
         <div className="relative overflow-hidden rounded-[20px] bg-[var(--foreground)]/[0.06] px-6 py-12 text-center shadow-none sm:px-12 sm:py-16 dark:bg-[var(--foreground)]/10">
           <h2 id="final-cta-heading" className="text-2xl font-semibold tracking-tight text-[var(--foreground)] sm:text-3xl">
             Ready for a logo that feels certain
@@ -26,7 +27,7 @@ export function FinalCTA() {
             No commitment until you send your brief.
           </p>
         </div>
-        <ContactSocialCard />
+        <SocialMediasCard />
       </div>
     </section>
   );

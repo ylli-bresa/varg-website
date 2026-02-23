@@ -5,6 +5,7 @@ import { PricingToggle } from "@/components/PricingToggle";
 import { FAQ } from "@/components/FAQ";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { AnimateOnScroll } from "@/components/AnimateOnScroll";
+import { FinalCTA } from "@/components/home/FinalCTA";
 
 export const metadata: Metadata = {
   title: "Logo Design Pricing | Transparent Packages & Plans",
@@ -65,6 +66,7 @@ export default function PricingPage() {
         </div>
         </AnimateOnScroll>
       </div>
+      <FinalCTA />
     </>
   );
 }
