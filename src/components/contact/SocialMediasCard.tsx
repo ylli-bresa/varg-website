@@ -7,7 +7,7 @@ const socialItems = [
 
 export function SocialMediasCard() {
   return (
-    <div className="rounded-[20px] bg-[var(--foreground)]/[0.06] p-6 py-10 text-center shadow-none dark:bg-[var(--foreground)]/10 sm:p-8 sm:py-12">
+    <div className="rounded-[20px] bg-[var(--foreground)]/10 p-6 py-10 text-center shadow-none sm:p-8 sm:py-12">
       <h3 className="text-lg font-semibold text-[var(--foreground)] sm:text-xl">
         Social Medias
       </h3>

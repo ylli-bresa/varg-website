@@ -53,7 +53,7 @@ export function Navbar() {
           <Logo />
         </Link>
 
-        {/* Desktop: links + theme + CTA */}
+        {/* Desktop: links + CTA */}
         <div className="hidden items-center gap-6 sm:flex">
           <ul className="flex items-center gap-8">
             {navItems.map(({ href, label }) => (

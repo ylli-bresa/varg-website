@@ -8,7 +8,7 @@ const socialConfig = [
 export function ContactSocialCard() {
   if (socialConfig.length === 0) return null;
   return (
-    <div className="mt-6 rounded-[20px] bg-[var(--foreground)]/[0.06] p-6 dark:bg-[var(--foreground)]/10">
+    <div className="mt-6 rounded-[20px] bg-[var(--foreground)]/10 p-6">
       <h2 className="text-center text-lg font-semibold text-[var(--foreground)] sm:text-xl">Follow us</h2>
       <p className="mt-1 text-center text-sm text-[var(--foreground)]/70">Find us on Instagram and Pinterest</p>
       <div className="mt-4 flex flex-wrap items-center justify-center gap-6">

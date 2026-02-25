@@ -46,7 +46,7 @@ export default function PrivacyPage() {
           </h1>
           <p className="mt-2 text-sm text-[var(--foreground)]/60">Last updated: {lastUpdated}</p>
 
-          <div className="prose prose-neutral mt-10 max-w-none dark:prose-invert">
+          <div className="prose prose-neutral prose-invert mt-10 max-w-none">
           <p className="text-[var(--foreground)]/80">
             {site.name} (“we”, “us”, “our”) operates the website at {site.baseUrl} and provides logo design and brand identity services. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website or services. For our logo design services visit the <Link href="/" className="font-medium text-[var(--foreground)] underline-offset-2 hover:underline">homepage</Link>; for <Link href="/pricing" className="font-medium text-[var(--foreground)] underline-offset-2 hover:underline">logo design pricing</Link> or to <Link href="/contact" className="font-medium text-[var(--foreground)] underline-offset-2 hover:underline">hire a logo designer</Link>, see the pricing and contact pages.
           </p>

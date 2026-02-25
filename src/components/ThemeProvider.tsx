@@ -1,12 +1,10 @@
 "use client";
 
 import { useEffect } from "react";
-import { ThemeProvider as NextThemesProvider, useTheme } from "next-themes";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
 
 function ThemeColorSync({ children }: { children: React.ReactNode }) {
-  const { resolvedTheme } = useTheme();
   useEffect(() => {
-    if (resolvedTheme === undefined) return;
     const color = "#0c0c0c";
     let meta = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
     if (!meta) {
@@ -15,7 +13,7 @@ function ThemeColorSync({ children }: { children: React.ReactNode }) {
       document.head.appendChild(meta);
     }
     meta.content = color;
-  }, [resolvedTheme]);
+  }, []);
   return <>{children}</>;
 }
 
@@ -27,6 +25,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       forcedTheme="dark"
       enableSystem={false}
       storageKey="varg-theme"
+      disableTransitionOnChange
     >
       <ThemeColorSync>{children}</ThemeColorSync>
     </NextThemesProvider>

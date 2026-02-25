@@ -19,7 +19,7 @@ export function WhyChooseUs() {
         <ul className="stagger-children mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3" role="list">
           {bullets.map((item) => (
             <li key={item} className="stagger-item">
-              <div className="why-card rounded-[20px] bg-[var(--foreground)]/[0.08] px-4 py-3.5 text-left text-sm font-medium text-[var(--foreground)] transition-colors duration-200 dark:bg-[var(--foreground)]/10">
+              <div className="why-card rounded-[20px] bg-[var(--foreground)]/10 px-4 py-3.5 text-left text-sm font-medium text-[var(--foreground)] transition-colors duration-200">
                 {item}
               </div>
             </li>

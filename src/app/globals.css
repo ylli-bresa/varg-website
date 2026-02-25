@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Site is dark-only: no light theme. Class strategy so system preference cannot switch. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #0c0c0c;
   --foreground: #e5e5e5;
@@ -26,6 +29,8 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
   min-height: 100dvh;
   overflow-x: hidden;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
 
 /* Same look on Android: tap highlight, smooth scroll */

@@ -23,7 +23,7 @@ export function ProcessSteps() {
         <ol className="stagger-children mt-10 grid gap-4 sm:grid-cols-3" role="list">
           {steps.map(({ title, body }, i) => (
             <li key={title} className="stagger-item">
-              <div className="why-card h-full rounded-[20px] bg-[var(--foreground)]/[0.08] p-5 text-left transition-colors duration-200 dark:bg-[var(--foreground)]/10">
+              <div className="why-card h-full rounded-[20px] bg-[var(--foreground)]/10 p-5 text-left transition-colors duration-200">
                 <span className="text-2xl font-semibold text-[var(--foreground)]/40" aria-hidden>
                   {String(i + 1).padStart(2, "0")}
                 </span>

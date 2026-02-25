@@ -21,7 +21,7 @@ export function FAQ({ showSchema = true, pagePath = "/" }: { showSchema?: boolea
           {faqItems.map(({ question, answer }) => (
             <details
               key={question}
-              className="group rounded-[20px] bg-[var(--foreground)]/[0.06] transition-colors duration-200 open:bg-[var(--foreground)]/[0.08] dark:bg-[var(--foreground)]/10 dark:open:bg-[var(--foreground)]/15"
+              className="group rounded-[20px] bg-[var(--foreground)]/10 transition-colors duration-200 open:bg-[var(--foreground)]/15"
               role="listitem"
             >
               <summary className="flex cursor-pointer list-none items-start justify-between gap-6 px-5 py-4 text-left font-medium text-[var(--foreground)] [&::-webkit-details-marker]:hidden">

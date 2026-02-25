@@ -2,7 +2,6 @@
 
 import { useState, useCallback, useRef } from "react";
 import { useSearchParams } from "next/navigation";
-import { useTheme } from "next-themes";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const STEPS = [
@@ -68,7 +67,6 @@ export function GuidedFormWizard() {
   const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [step, setStep] = useState(1);
   const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? "";
-  const { resolvedTheme } = useTheme();
   const [data, setData] = useState<BriefData>(() => ({
     ...initial,
     package: packageParam === "premium" ? "premium" : packageParam === "enterprise" ? "enterprise" : "standard",
@@ -167,7 +165,7 @@ export function GuidedFormWizard() {
 
   if (success) {
     return (
-      <div className="rounded-[20px] bg-[var(--foreground)]/[0.06] p-6 dark:bg-[var(--foreground)]/10">
+      <div className="rounded-[20px] bg-[var(--foreground)]/10 p-6">
         <p className="font-medium text-[var(--foreground)]">Brief received. We will reply with next steps.</p>
       </div>
     );
@@ -374,14 +372,14 @@ export function GuidedFormWizard() {
           <ReCAPTCHA
             ref={recaptchaRef}
             sitekey={recaptchaSiteKey}
-            theme={resolvedTheme === "dark" ? "dark" : "light"}
+            theme="dark"
             size="normal"
             aria-label="Verify you are not a robot"
           />
         </div>
       )}
 
-      {error && <p className="text-sm text-red-600 dark:text-red-400" role="alert">{error}</p>}
+      {error && <p className="text-sm text-red-400" role="alert">{error}</p>}
 
       <div className="flex gap-4">
         {step > 1 && (

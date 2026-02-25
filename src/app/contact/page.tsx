@@ -56,7 +56,7 @@ export default function ContactPage() {
           </div>
         </AnimateOnScroll>
         <div className="mx-auto max-w-xl text-center mt-10 space-y-6">
-          <div className="rounded-[20px] bg-[var(--foreground)]/[0.06] p-6 dark:bg-[var(--foreground)]/10">
+          <div className="rounded-[20px] bg-[var(--foreground)]/10 p-6">
             <Suspense fallback={<div className="text-[var(--foreground)]/60">Loading…</div>}>
               <ContactToggle />
             </Suspense>

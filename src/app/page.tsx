@@ -40,10 +40,10 @@ export default function HomePage() {
       <HomeJsonLd />
       <Hero />
       <AnimateOnScroll>
-        <ClientLogos />
+        <WorkPreview />
       </AnimateOnScroll>
       <AnimateOnScroll>
-        <WorkPreview />
+        <ClientLogos />
       </AnimateOnScroll>
       <AnimateOnScroll>
         <WhyChooseUs />

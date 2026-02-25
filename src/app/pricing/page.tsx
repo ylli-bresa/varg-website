@@ -57,6 +57,9 @@ export default function PricingPage() {
           </Link>{" "}
           and send your brief.
         </p>
+        <p className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-[var(--foreground)]/5 px-3 py-1 text-sm font-medium text-[var(--foreground)]">
+          <span aria-hidden>✓</span> 100% money back guaranteed
+        </p>
         <div className="mt-12">
           <PricingToggle />
         </div>

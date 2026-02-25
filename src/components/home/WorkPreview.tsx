@@ -23,7 +23,7 @@ export function WorkPreview() {
               <Link
                 key={slug}
                 href={`/work/${slug}`}
-                className="group block overflow-hidden rounded-[20px] bg-[var(--foreground)]/[0.06] text-left transition-all duration-300 hover:bg-[var(--foreground)]/[0.1] dark:bg-[var(--foreground)]/10 dark:hover:bg-[var(--foreground)]/15"
+                className="group block overflow-hidden rounded-[20px] bg-[var(--foreground)]/10 text-left transition-all duration-300 hover:bg-[var(--foreground)]/15"
               >
                 <div
                   className={`relative aspect-square overflow-hidden rounded-[20px] bg-[var(--foreground)]/5 ${isLast ? "p-0" : "p-4"}`}
@@ -43,7 +43,7 @@ export function WorkPreview() {
                       className={`absolute bottom-2 left-2 w-max max-w-[calc(100%-1rem)] break-words rounded-2xl border px-2.5 py-1.5 text-center text-[10px] font-normal shadow-sm backdrop-blur-md ${
                         index === 0
                           ? "border-[var(--foreground)]/20 bg-[var(--foreground)]/80 text-[var(--background)]/90"
-                          : "border-white/20 bg-[var(--foreground)]/5 text-[var(--foreground)]/60 dark:border-white/10 dark:bg-[var(--foreground)]/10 dark:text-[var(--foreground)]/70"
+                          : "border-white/10 bg-[var(--foreground)]/10 text-[var(--foreground)]/70"
                       }`}
                     >
                       + {tag.charAt(0).toUpperCase() + tag.slice(1)}

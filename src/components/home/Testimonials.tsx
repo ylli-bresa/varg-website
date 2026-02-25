@@ -56,7 +56,7 @@ export function Testimonials() {
                   }`}
                   aria-hidden={i !== index}
                 >
-                  <blockquote className="flex min-h-[180px] w-full flex-col justify-between rounded-[20px] bg-[var(--foreground)]/[0.06] p-4 sm:p-5 dark:bg-[var(--foreground)]/10">
+                  <blockquote className="flex min-h-[180px] w-full flex-col justify-between rounded-[20px] bg-[var(--foreground)]/10 p-4 sm:p-5">
                     <p className="text-sm leading-relaxed text-[var(--foreground)]/90 sm:text-base">&ldquo;{quote}&rdquo;</p>
                     <footer className="mt-3 flex items-center gap-3 text-xs text-[var(--foreground)]/70 sm:text-sm">
                       {(logoLabel || logoPath) && (
