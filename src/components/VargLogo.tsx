@@ -1,16 +1,13 @@
-import type { SVGProps } from "react";
-
-/** SVG recreation of the mockup brand mark (shield + neon ring + star/wolf). */
-export default function VargLogo(props: SVGProps<SVGSVGElement>) {
+/** Inline brand mark — prefers the traced SVG asset. */
+export default function VargLogo({ className = "" }: { className?: string }) {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 780 760"
-      role="img"
-      aria-label="Varg"
-      {...props}
-    >
-      <image href="/varg-mark.svg" width="780" height="760" />
-    </svg>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src="/varg-mark.svg"
+      alt="Varg"
+      className={className}
+      width={52}
+      height={52}
+    />
   );
 }
