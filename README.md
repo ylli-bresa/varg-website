@@ -19,4 +19,4 @@ Open [http://localhost:3000](http://localhost:3000).
 ## Notes
 
 - Hero background is a placeholder (landscape + plus). Real photography will be added later.
-- Brand mark is an SVG recreation of the mockup logo (`public/varg-mark.svg`).
+- Brand mark is an inline SVG recreation of the mockup logo (`src/components/VargLogo.tsx`); PNG/SVG copies also live in `public/`.
