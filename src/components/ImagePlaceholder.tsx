@@ -1,4 +1,4 @@
-/** Landscape + plus placeholder matching the mockup hero center mark. */
+/** Faint landscape + plus mark — matches mockup hero center placeholder. */
 export default function ImagePlaceholder({
   className = "",
 }: {
@@ -7,30 +7,26 @@ export default function ImagePlaceholder({
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 160 130"
+      viewBox="0 0 200 160"
       fill="none"
       className={className}
       aria-hidden="true"
     >
-      {/* Soft frame */}
       <rect
-        x="6"
-        y="18"
-        width="148"
-        height="100"
-        rx="6"
+        x="10"
+        y="28"
+        width="168"
+        height="116"
+        rx="8"
         stroke="#525252"
-        strokeWidth="5"
+        strokeWidth="6"
       />
-      {/* Sun / moon */}
-      <circle cx="118" cy="46" r="11" fill="#525252" />
-      {/* Mountains */}
-      <path d="M18 108L62 52L86 78L108 58L142 108H18Z" fill="#525252" />
-      {/* Plus (top-right) */}
+      <circle cx="140" cy="58" r="14" fill="#525252" />
+      <path d="M22 132L78 62L108 96L132 72L168 132H22Z" fill="#525252" />
       <path
-        d="M142 6V26M132 16H152"
+        d="M178 8V32M166 20H190"
         stroke="#525252"
-        strokeWidth="5"
+        strokeWidth="6"
         strokeLinecap="round"
       />
     </svg>
